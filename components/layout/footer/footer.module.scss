@@ -1,0 +1,56 @@
+
+.footer {
+  width: 100%;
+
+  .wrapper {
+    padding: 3rem;
+    padding-bottom: 1rem;
+    flex-flow: column wrap;
+    gap: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+    max-width: 110rem;
+
+  }
+
+  .title {
+    font-size: 2.3rem;
+    max-width: 55rem;
+  }
+
+  .description {
+    font-size: 1.4rem;
+    max-width: 51rem;
+    color: var(--black-300);
+  }
+
+  .links {
+
+    .home {
+      max-width: 4rem;
+      display: block;
+
+      svg {
+        width: 100%;
+      }
+    }
+
+    .socials {
+      gap: 1.8rem;
+      font-size: 1.6rem;
+      .social {
+        width: 2.5rem;
+        display: block;
+
+        svg path {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+}
