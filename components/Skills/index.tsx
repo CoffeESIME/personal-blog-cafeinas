@@ -1,19 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJsSquare, faReact, faPhp, faIntercom, faPython, faAws, faGitAlt } from '@fortawesome/free-brands-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition, library } from '@fortawesome/fontawesome-svg-core';
 import skillsData from '../../data/skills.json';
 
 library.add(faJsSquare, faReact, faPhp, faIntercom, faPython, faAws, faGitAlt);
 
-const iconMap = {
-    "js-square": faJsSquare,
-    "react": faReact,
-    "php": faPhp,
-    "database": faIntercom,
-    "python": faPython,
-    "aws": faAws,
-    "git-alt": faGitAlt
-  };
+const iconMap: { [key: string]: IconDefinition } = {
+  "js-square": faJsSquare,
+  "react": faReact,
+  "php": faPhp,
+  "database": faIntercom,
+  "python": faPython,
+  "aws": faAws,
+  "git-alt": faGitAlt
+};
   
   const Skills: React.FC = () => {
     return (
