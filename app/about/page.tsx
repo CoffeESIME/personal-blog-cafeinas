@@ -1,21 +1,30 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import Profile from "../../public/profile.jpg";
+import ChangingText from "@/components/utils/ChangingText";
+import phrases from '../../data/phrases.json'
+import SkillsSection from "@/components/Skills";
 function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-8">
+      <div>
+        <h2 className="text-2xl font-bold text-blue-800">G'day, I'm Fabian!</h2>
+        <h2 className="text-2xl font-bold text-blue-800">I'm a control and automation engineer, turned Developer</h2>
+        <h2 className="text-2xl font-bold text-blue-800  flex">and a &nbsp;<ChangingText phrases={phrases} /></h2>
+      </div>
       <div className="flex flex-col md:flex-row items-center gap-8">
         <Image
           src={Profile}
           alt="Profile"
-          className="w-48 h-48 rounded-full border-4 border-blue-500"
+          className="w-48 h-48 rounded-full "
           width={0}
           height={0}
         />
         <div>
-          <h1 className="text-2xl font-bold text-blue-800">About Me</h1>
+          <h1 className="text-2xl font-bold text-blue-800">Who is Fabian?</h1>
           <p className="mt-4 text-gray-700">
-            Hi, I&apos;m Fabian, a dedicated software engineer with a background in
+            I'm a  software engineer with a background in
             control and automation engineering. I&apos;m passionate about developing
             innovative applications, exploring new technologies, and diving into
             areas like IoT, machine learning, and data structures.
@@ -27,14 +36,10 @@ function AboutPage() {
             nature through photography during my hikes.
           </p>
           <div className="mt-4">
-            <h2 className="text-xl font-semibold text-blue-700">Skills</h2>
-            <ul className="list-disc list-inside">
-              <li>JavaScript & Python</li>
-              <li>React, Next.js</li>
-              <li>IoT and Automation Systems</li>
-              <li>Web Scraping & API Development</li>
-              <li>User Interface Design and UX Principles</li>
-            </ul>
+            <h2 className="text-2xl font-semibold text-blue-700">Skills & toolbox</h2>
+            <SkillsSection />
+          </div>
+          <div className="mt-4"><h2 className="text-2xl font-semibold text-blue-700">Currently learning:</h2>
           </div>
         </div>
       </div>

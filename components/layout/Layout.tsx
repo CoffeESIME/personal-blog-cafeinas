@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/footer";
 import Header from "./header/Header";
 
 export default function BlogLayout({
@@ -6,9 +7,10 @@ export default function BlogLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header></Header>
-      <div>{children}</div>
-    </>
+      <div className="flex-1">{children}</div>
+      <Footer></Footer>
+    </div>
   );
 }

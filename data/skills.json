@@ -1,0 +1,31 @@
+[
+    {
+      "icon": "js-square",
+      "name": "JavaScript"
+    },
+    {
+      "icon": "react",
+      "name": "React"
+    },
+    {
+      "icon": "php",
+      "name": "PHP"
+    },
+    {
+      "icon": "database",
+      "name": "SQL Databases"
+    },
+    {
+      "icon": "python",
+      "name": "Python"
+    },
+    {
+      "icon": "aws",
+      "name": "AWS Basics"
+    },
+    {
+      "icon": "git-alt",
+      "name": "Git"
+    }
+  ]
+  
