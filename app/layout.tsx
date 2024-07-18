@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import BlogLayout from "@/components/layout/Layout";
 import "./globals.css";
+import { FloatNav } from "@/components/nav/FloatNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body  className={`flex flex-col h-full antialiased bg-top bg-no-repeat bg-neutral-50 bg-lights-sun  dark:bg-neutral-900 ${inter.className}`}>
+      <div className="relative mb-16 sm:mb-32">
         <BlogLayout>{children}</BlogLayout>
+        <FloatNav />
+        </div>
       </body>
     </html>
   );

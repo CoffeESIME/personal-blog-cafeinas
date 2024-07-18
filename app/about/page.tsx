@@ -4,10 +4,6 @@ import Image from "next/image";
 import Profile from "../../public/profile.jpg";
 import ChangingText from "@/components/utils/ChangingText";
 import phrases from '../../data/phrases.json'
-import SkillsSection from "@/components/Skills";
-import { faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Balancer from "react-wrap-balancer";
 import { Reviews } from "@/components/Reviews/Reviews";
 function AboutPage() {
