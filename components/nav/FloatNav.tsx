@@ -12,19 +12,15 @@ import { Dock } from './Dock';
 interface NavItemProps {
   href: string;
   children: React.ReactNode;
-  target?: string;
-  rel?: string;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ href, children, target, rel, onMouseEnter, onMouseLeave }) => {
+const NavItem: React.FC<NavItemProps> = ({ href, children, onMouseEnter, onMouseLeave }) => {
   const isActive = useRouter().pathname === href;
   return (
     <li className="flex items-center">
       <Link
-        target={target}
-        rel={rel}
         href={href}
         className={cn(
           'relative block px-3 transition',
@@ -60,8 +56,6 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = (props) => {
               <NavItem
                 key={index}
                 href={link.href}
-                target={link.target}
-                rel={link.target === '_blank' ? 'noopener noreferrer' : ''}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >

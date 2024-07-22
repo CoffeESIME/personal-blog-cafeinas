@@ -29,10 +29,8 @@ export function Dock({ className }: DockProps) {
         {generalLinks.map((link, i) => (
                 <AppIcon
                 href={link.href}
-                rel={link.target === '_blank' ? 'noopener noreferrer' : ''}
-                target={link.target ? link.target : ''}
                 aria-label={link.label}
-                icon={link.icon} // Ensure that `icon` prop properly handles the component reference
+                icon={link.icon} 
                 mouseX={mouseX}
                 key={i} ariaLabel={''}                />
         ))}
@@ -44,8 +42,6 @@ export function Dock({ className }: DockProps) {
 
 interface AppIconProps {
   href: string;
-  target: string;
-  rel: string;
   ariaLabel: string;
   icon: ElementType<any> | ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | string;
   mouseX: any;
@@ -53,8 +49,6 @@ interface AppIconProps {
 
 export function AppIcon({
   href,
-  target,
-  rel,
   ariaLabel,
   icon: Icon,
   mouseX,
@@ -70,7 +64,7 @@ export function AppIcon({
   let width = useSpring(widthSync, { mass: 0.1, stiffness: 150, damping: 12 });
 
   return (
-    <Link href={href} rel={rel} target={target} aria-label={ariaLabel}>
+    <Link href={href} aria-label={ariaLabel}>
       <motion.div
         ref={ref}
         style={{ width }}

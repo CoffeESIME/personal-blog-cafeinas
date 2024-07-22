@@ -129,7 +129,7 @@ export function Reviews() {
                 id="reviews-title"
                 className="text-3xl font-medium tracking-tight body-primary"
             >
-                Testimonios
+                Testimonials
             </h2>
             <ReviewGrid />
         </section>

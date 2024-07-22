@@ -59,14 +59,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
-
-      <div>
-        <div className="w-4/5 content-center">
-          <h2 className="text-2xl font-bold text-blue-800">Testimonials</h2>
-        </div>
-      </div>
     </div>
-
   );
 }
 
