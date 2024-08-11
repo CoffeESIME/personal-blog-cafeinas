@@ -24,7 +24,7 @@ export function Dock({ className }: DockProps) {
       <motion.div
         onMouseMove={(e) => mouseX.set(e.clientX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className="flex items-end h-16 gap-4 px-4 pb-2.5 mx-auto outline-0 rounded-2xl box-gen ring-1 ring-zinc-200 dark:ring-[#1a1a1a]"
+        className="flex items-end h-16 gap-4 px-4 pb-2.5 mx-auto rounded-2xl box-gen "
       >
         {generalLinks.map((link, i) => (
                 <AppIcon
