@@ -15,7 +15,6 @@ export default function Home() {
         Working on 3PillarGlobal and as Freelance.
         <StatusWork isAvailable={isAvailable}></StatusWork>
       </div>
-      <div className="mt-24 md:mt-28"></div>
       <ol className="group/list">
         {/* Other Job Entries */}
         <li className="mb-2">
