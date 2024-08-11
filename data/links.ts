@@ -8,13 +8,14 @@ import {
     User,
     GitBranch,
     InspectIcon,
-    ScrollIcon
+    ScrollIcon,
+    MailIcon
   } from 'lucide-react'
   
   export const generalLinks = [
     {
       href: '/',
-      label: 'Inicio',
+      label: 'Home',
       icon: ScrollIcon,
     },
     {
@@ -28,14 +29,14 @@ import {
       icon: BookOpen,
     },
     {
-      href: '/proyectos',
+      href: '/proyects',
       label: 'Proyectos',
       icon: Code,
     },
     {
-      href: '/stack',
-      label: 'Stack',
-      icon: Layers,
+      href: '/contact',
+      label: 'Contact',
+      icon: MailIcon,
     },
   ]
   
