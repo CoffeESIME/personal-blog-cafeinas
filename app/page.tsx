@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
         </li>
-        <li className="mb-2">
+        <li className="mb-6">
           <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <div className="p-2 -inset-y-4 z-0 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
               <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
