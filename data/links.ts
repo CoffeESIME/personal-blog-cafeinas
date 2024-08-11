@@ -5,17 +5,17 @@ import {
     Linkedin,
     Mail,
     Scroll,
-    ShoppingCart,
     User,
     GitBranch,
-    InspectIcon
+    InspectIcon,
+    ScrollIcon
   } from 'lucide-react'
   
   export const generalLinks = [
     {
       href: '/',
       label: 'Inicio',
-      icon: 'Avatar',
+      icon: ScrollIcon,
     },
     {
       href: '/about',

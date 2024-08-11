@@ -4,7 +4,7 @@ import JobsList from '@/components/Cards/JobList'
 
 export default function Resume({ }) {
   return (
-    <div className= 'relative col-span-6 gap-2 sm:col-span-3 md:col-span-3 lg:col-span-3 h-80"'>
+    <div className= 'box-gen hover:shadow-lg group flex flex-col items-start overflow-hidden rounded-2xl p-4 shadow relative col-span-6 h-80 gap-2 sm:col-span-3 md:col-span-3 lg:col-span-3'>
       <JobsList />
 
       <div className="flex flex-row justify-between w-full gap-2">

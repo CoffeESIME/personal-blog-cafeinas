@@ -1,13 +1,11 @@
 'use client';
 
 import { useRef } from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 // Define the type for the role prop
 interface Role {
     index: number;
-    logo: string;
     title: string;
     company: string;
     start: string;
@@ -41,16 +39,7 @@ export function JobItem({ role, scrollPosition, heightItem, roleIndex }: JobItem
             }}
             ref={ref}
         >
-            <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <Image
-                    src={role.logo}
-                    alt={role.title}
-                    className="w-10 h-10"
-                    priority={roleIndex <= 1}
-                />
-            </div>
             <div className="flex flex-wrap flex-auto gap-x-2">
-                <div className="sr-only">Empresa y Fecha</div>
                 <div className="flex-none w-full text-sm font-medium body-primary">
                     {role.company}&nbsp;-&nbsp;
                     <div

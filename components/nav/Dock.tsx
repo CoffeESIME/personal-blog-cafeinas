@@ -1,6 +1,6 @@
 'use client'
 
-import { ElementType, ForwardRefExoticComponent, RefAttributes, useEffect, useRef, useState } from 'react';
+import { ElementType, ForwardRefExoticComponent, RefAttributes, useRef } from 'react';
 import Link from 'next/link';
 import { generalLinks } from '@/data/links';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
@@ -34,7 +34,6 @@ export function Dock({ className }: DockProps) {
                 mouseX={mouseX}
                 key={i} ariaLabel={''}                />
         ))}
-        <hr className="h-10 w-[1px] bg-neutral-300 dark:bg-neutral-700 mt-2.5 border-none"></hr>
       </motion.div>
     </div>
   );
