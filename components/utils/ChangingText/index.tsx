@@ -19,7 +19,7 @@ const ChangingText: React.FC<Props> = ({ phrases, interval = 3000, className = '
     }, [interval]);
 
     return (
-        <div style={{ position: 'relative', height: '24px', width: '500px' }}>
+        <div style={{ position: 'relative', height: '24px', width: '300px' }}>
         <AnimatePresence>
           <motion.span
             key={phrases[index]}

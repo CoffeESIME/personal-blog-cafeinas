@@ -28,17 +28,17 @@ function AboutPage() {
 
               </div>
               <div className="lg:order-first lg:row-span-2">
-                <h1 className="title-primary">
+                <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
                   <Balancer>
                     G&apos;day, I&apos;m Fabian!
                   </Balancer>
                 </h1>
-                <div className="mt-6 text-base space-y-7 body-secondary">
-                  <p>
-                    I&apos;m a Control and Automation engineer, turned Developer
+                <div className="mt-4 space-y-3 body-secondary">
+                  <p className="text-2xl">
+                    I&apos;m a Control and Automation engineer, turned Developer...
                   </p>
-                  <div className="flex">
-                    and a &nbsp; &nbsp;<ChangingText phrases={phrases} />
+                  <div className="flex text-2xl">
+                    and a &nbsp;<ChangingText phrases={phrases} />
                   </div>
                   <p>
                     I&apos;m a  software engineer with a background in
