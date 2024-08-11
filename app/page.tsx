@@ -19,52 +19,52 @@ export default function Home() {
       <ol className="group/list">
         {/* Other Job Entries */}
         <li className="mb-2">
-  <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-    <div className="p-2 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
-      <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
-        2022 - Present
-      </header>
-      <div className="z-10 sm:col-span-6">
-        <h3 className="font-medium leading-snug text-slate-200">
-          <div>
-            <div className="inline-flex items-baseline font-medium leading-light text-slate-200 hover:text-teal-300 text-base">
-              <span>
-                Software Engineer, Fullstack Developer
-                <span className="pl-2 inline-block">3PillarGlobal</span>
-              </span>
+          <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <div className="p-2 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
+              <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                2022 - Present
+              </header>
+              <div className="z-10 sm:col-span-6">
+                <h3 className="font-medium leading-snug text-slate-200">
+                  <div>
+                    <div className="inline-flex items-baseline font-medium leading-light text-slate-200 hover:text-teal-300 text-base">
+                      <span>
+                        Software Engineer, Fullstack Developer
+                        <span className="pl-2 inline-block">3PillarGlobal</span>
+                      </span>
+                    </div>
+                  </div>
+                </h3>
+                <p className="mt-2 text-sm leading-normal">
+                  I have worked on various web development projects, focusing on both frontend and backend technologies, as well as infrastructure and DevOps.
+                </p>
+                <ul className="mt-2 ml-4 list-disc list-inside text-sm text-slate-200 space-y-1">
+                  <li>
+                    Developed an internal project management system using Next.js, Tailwind, Node.js, Express, and MongoDB.
+                  </li>
+                  <li>
+                    Integrated SonarQube for continuous code quality checks.
+                  </li>
+                  <li>
+                    Worked on a Python and Django-based project, utilizing Swagger for API documentation.
+                  </li>
+                  <li>
+                    Contributed to the app infrastructure using AWS and Terraform, handling DevOps tasks with Docker, GitHub Actions, and Bitbucket Pipelines.
+                  </li>
+                  <li>
+                    Gained experience with Linux, Apache, and Nginx servers.
+                  </li>
+                  <li>
+                    Re-engaged with React, writing tests for both frontend and backend, and used Checkmarx for code analysis.
+                  </li>
+                  <li>
+                    Developed backend services using NestJS with GraphQL and frontend applications using React, SQL (PostgreSQL), CSS, and Material-UI.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </h3>
-        <p className="mt-2 text-sm leading-normal">
-          I have worked on various web development projects, focusing on both frontend and backend technologies, as well as infrastructure and DevOps.
-        </p>
-        <ul className="mt-2 ml-4 list-disc list-inside text-sm text-slate-200 space-y-1">
-          <li>
-            Developed an internal project management system using Next.js, Tailwind, Node.js, Express, and MongoDB.
-          </li>
-          <li>
-            Integrated SonarQube for continuous code quality checks.
-          </li>
-          <li>
-            Worked on a Python and Django-based project, utilizing Swagger for API documentation.
-          </li>
-          <li>
-            Contributed to the app infrastructure using AWS and Terraform, handling DevOps tasks with Docker, GitHub Actions, and Bitbucket Pipelines.
-          </li>
-          <li>
-            Gained experience with Linux, Apache, and Nginx servers.
-          </li>
-          <li>
-            Re-engaged with React, writing tests for both frontend and backend, and used Checkmarx for code analysis.
-          </li>
-          <li>
-            Developed backend services using NestJS with GraphQL and frontend applications using React, SQL (PostgreSQL), CSS, and Material-UI.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</li>
+        </li>
 
         <li className="mb-2">
           <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
@@ -195,7 +195,7 @@ export default function Home() {
                   <li>
                     <strong>Simulation and Design Software:</strong> Conducted
                     courses in MATLAB for system modeling and control design, and
-                    SolidWorks for CAD, enhancing students' ability to simulate
+                    SolidWorks for CAD, enhancing students`&apos;` ability to simulate
                     and visualize engineering projects.
                   </li>
                 </ul>
