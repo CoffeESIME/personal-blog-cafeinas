@@ -1,5 +1,233 @@
+'use client'
+import CourseCarousel from "@/components/Courses/CourseCarusel";
+import { type Course } from "@/components/Courses/CourseItem";
 import { StatusWork } from "@/components/StatusWork/StatusWork";
-
+const courses: Course[] = [
+  {
+    id: 1,
+    title: "Debugging Projects Manually",
+    platform: "Deprecated Guided Projects",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 80%"
+  },
+  {
+    id: 2,
+    title: "REACT: Carrito de compras con Context",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 87.50%"
+  },
+  {
+    id: 3,
+    title: "CSS Animated Components with ReactJS",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 81.81%"
+  },
+  {
+    id: 4,
+    title: "Introduction to Git and GitHub",
+    platform: "Google",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    id: 5,
+    title: "Node.js Backend Basics with Best Practices",
+    platform: "Deprecated Guided Projects",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    id: 6,
+    title: "Debugging support for the Node.js runtime in VScode",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 80%"
+  },
+  {
+    id: 7,
+    title: "Fundamentos de React Hooks",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 87.50%"
+  },
+  {
+    id: 8,
+    title: "Git for Developers Using Github",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 90%"
+  },
+  {
+    id: 9,
+    title: "Build a Twitter Clone Front-End with ReactJS",
+    platform: "Deprecated Guided Projects",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    id: 10,
+    title: "Server-side Development with NodeJS, Express and MongoDB",
+    platform: "The Hong Kong University of Science and Technology",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    id: 11,
+    title: "Creando tu primera app con ReactJS",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    id: 12,
+    title: "Front-End Web Development with React",
+    platform: "The Hong Kong University of Science and Technology",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    id: 13,
+    title: "Introduction to HTML5",
+    platform: "University of Michigan",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 86.83%"
+  },
+  {
+    id: 14,
+    title: "HTML, CSS, and Javascript for Web Developers",
+    platform: "Johns Hopkins University",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 97.91%"
+  },
+  {
+    id: 15,
+    title: "React: Operaciones Básicas CRUD",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 87.50%"
+  },
+  {
+    id: 16,
+    title: "Cómo entrenar a tus electrones 2: Diodos y Transistores",
+    platform: "Pontificia Universidad Católica de Chile",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 96.22%"
+  },
+  {
+    id: 17,
+    title: "Build Your First React Website",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 90%"
+  },
+  {
+    id: 18,
+    title: "Front-End Web UI Frameworks and Tools: Bootstrap 4",
+    platform: "The Hong Kong University of Science and Technology",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    id: 19,
+    title: "Cómo entrenar a tus electrones 1: Fundamentos de la electrónica analógica",
+    platform: "Pontificia Universidad Católica de Chile",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 91.40%"
+  },
+  {
+    id: 20,
+    title: "Modern JavaScript: ES6 Basics",
+    platform: "Coursera Project Network",
+    link: "https://coursera.org",
+    description: "Grade Achieved: 100%"
+  },
+  {
+    "id": 101,
+    "title": "Full-Stack Web Development with React",
+    "platform": "The Hong Kong University of Science and Technology",
+    "link": "https://coursera.org/specialization/fullstack-react",
+    "description": "Specialization in full-stack development using React."
+  },
+  {
+    "id": 102,
+    "title": "An Introduction to Programming the Internet of Things (IOT)",
+    "platform": "University of California, Irvine",
+    "link": "https://coursera.org/specialization/iot",
+    "description": "Learn to develop and apply IOT solutions in real-world scenarios."
+  },
+  {
+    "id": 103,
+    "title": "JavaScript Basics",
+    "platform": "University of California, Davis",
+    "link": "https://coursera.org/course/javascript-basics",
+    "description": "Learn the basics of JavaScript programming."
+  },
+  {
+    "id": 104,
+    "title": "Introduction to Embedded Machine Learning",
+    "platform": "Edge Impulse",
+    "link": "https://edgeimpulse.com/course/embedded-ml",
+    "description": "Introduction to machine learning techniques on embedded systems."
+  },
+  {
+    "id": 105,
+    "title": "Advanced Styling with Responsive Design",
+    "platform": "University of Michigan",
+    "link": "https://coursera.org/course/advanced-css",
+    "description": "Master advanced CSS styling techniques including responsive design."
+  },
+  {
+    "id": 106,
+    "title": "Aprendiendo a hacer API con Node.JS",
+    "platform": "Deprecated Guided Projects",
+    "link": "https://coursera.org/project/nodejs-api",
+    "description": "Learn to develop APIs using Node.JS."
+  },
+  {
+    "id": 107,
+    "title": "Fundamentos de TypeScript",
+    "platform": "Universidad de los Andes",
+    "link": "https://coursera.org/course/typescript",
+    "description": "Fundamentals of TypeScript for scalable web applications."
+  },
+  {
+    "id": 108,
+    "title": "Introduction to Architecting Smart IoT Devices",
+    "platform": "EIT Digital",
+    "link": "https://coursera.org/course/smart-iot",
+    "description": "Learn to design and implement smart IoT devices."
+  },
+  {
+    "id": 109,
+    "title": "Build a Full-Stack Server for API Requests - NodeJS and Pug",
+    "platform": "Coursera Project Network",
+    "link": "https://coursera.org/project/fullstack-nodejs-pug",
+    "description": "Build a server to handle API requests using NodeJS and Pug."
+  },
+  {
+    "id": 1010,
+    "title": "Introduction to CSS3",
+    "platform": "University of Michigan",
+    "link": "https://coursera.org/course/intro-css3",
+    "description": "Learn the fundamentals of CSS3 for web design."
+  },
+  {
+    "id": 1011,
+    "title": "Use React State and Props to Create an Online Quiz",
+    "platform": "Deprecated Guided Projects",
+    "link": "https://coursera.org/project/react-state-props-quiz",
+    "description": "Create an interactive online quiz using React's state and props."
+  },
+  {
+    "id": 1012,
+    "title": "Mountains 101",
+    "platform": "University of Alberta",
+    "link": "https://coursera.org/course/mountains-101",
+    "description": "Comprehensive overview of mountain environments and their role in the ecosystem."
+  }
+]
 export default function Home() {
   const isAvailable = true;
   return (
@@ -194,7 +422,7 @@ export default function Home() {
                   <li>
                     <strong>Simulation and Design Software:</strong> Conducted
                     courses in MATLAB for system modeling and control design, and
-                    SolidWorks for CAD, enhancing students`&apos;` ability to simulate
+                    SolidWorks for CAD, enhancing students&apos; ability to simulate
                     and visualize engineering projects.
                   </li>
                 </ul>
@@ -203,7 +431,7 @@ export default function Home() {
           </div>
         </li>
 
-
+        <CourseCarousel courses={courses} />
         {/* Other Job Entries */}
       </ol>
     </main>

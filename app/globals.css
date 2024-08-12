@@ -31,3 +31,22 @@ body {
     text-wrap: balance;
   }
 }
+/* styles/ScrollbarStyles.css */
+/* Estilos para todos los scrollbars */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Handle (la parte que se desplaza) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 102, 241, 0.8); /* Cambia el color al que prefieras */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 2px solid transparent; /* Para un manejo opcional de bordes */
+  background-clip: content-box; /* Evita que el color de fondo se extienda más allá del borde */
+}
+
+/* Track (la parte en la que se desplaza el handle) */
+::-webkit-scrollbar-track {
+  background: rgba(229, 231, 235, 0.5); /* Cambia al color de fondo que prefieras */
+  border-radius: 5px; /* Bordes redondeados en la pista también */
+}

@@ -28,7 +28,7 @@ const Skills: React.FC<ISkills> = ({ size = '2x' }) => {
           key={index} 
           className="flex flex-col items-center text-center"
         >
-          <div className="w-16 h-16 flex items-center justify-center bg-gray-200 rounded-md">
+          <div className="w-16 h-16 flex items-center justify-center  rounded-md">
             <FontAwesomeIcon icon={iconMap[skill.icon]} size={size as SizeProp} />
           </div>
           <span className="mt-2">{skill.name}</span>
