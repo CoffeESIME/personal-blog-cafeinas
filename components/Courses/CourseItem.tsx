@@ -41,4 +41,3 @@ const CourseItem: React.FC<CourseItemProps> = ({ course }) => {
 export {
     CourseItem
 };
-export type { Course };
