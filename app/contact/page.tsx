@@ -4,7 +4,6 @@ import { faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-
 const ContactPage: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-
       <ContactSection></ContactSection>
     </div>
   );
@@ -19,13 +18,13 @@ const ContactSection: React.FC = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-5">Hey there!</h1>
         <p className="mb-5">I&apos;m always up for a chat.</p>
-        <p>Pop me an email at <a href="mailto:heromfabian@gmail.com" className="text-teal-300 hover:text-teal-500">heromfabian@gmail.com</a>
-          or give me a shout on social media.</p>
+        <p>Pop me an email at <a href="mailto:heromfabian@gmail.com" className="text-teal-300 hover:text-teal-500"> &nbsp;heromfabian@gmail.com</a>
+        &nbsp;  or give me a shout on social media.</p>
         <div className="flex justify-center space-x-4 mt-5">
-          <a href="https://linkedin.com" className="hover:text-gray-300 h-10 w-10">
+          <a href="https://www.linkedin.com/in/fabian-romero-hern%C3%A1ndez/" className="hover:text-gray-300 h-10 w-10">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
-          <a href="https://github.com" className="hover:text-gray-300 h-10 w-10">
+          <a href="https://github.com/CoffeESIME" className="hover:text-gray-300 h-10 w-10">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a href="https://instagram.com" className="hover:text-gray-300 h-10 w-10">

@@ -7,7 +7,8 @@ function ProyectsPage() {
         </p>
         <Skills size="2x" />
 
-    </section></div>)
+    </section>
+    <section className="my-16"><h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Aqui pondria mis proyectos si tan solo tuviera uno</h2></section></div>)
 }
 
 export default ProyectsPage
