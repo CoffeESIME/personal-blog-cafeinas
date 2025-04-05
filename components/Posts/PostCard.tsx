@@ -16,6 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useState } from "react";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export interface Tag {
   name: string;
@@ -34,21 +35,20 @@ export interface Post {
 }
 
 // Icons for each content source
-const sourceIcons = {
-  youtube: faYoutube,
-  tiktok: faTiktok,
-  instagram: faInstagram,
-  tumblr: faTumblr,
-  medium: faMedium,
-  blog: faGlobe,
+const sourceIcons: Record<string, IconProp> = {
+  youtube: faYoutube as IconProp,
+  tiktok: faTiktok as IconProp,
+  instagram: faInstagram as IconProp,
+  tumblr: faTumblr as IconProp,
+  medium: faMedium as IconProp,
+  blog: faGlobe as IconProp,
 };
 
 export function PostCard({ post }: { post: Post }) {
   const [imgError, setImgError] = useState(false);
 
   // Get the icon corresponding to the source
-  const sourceIcon =
-    sourceIcons[post.source as keyof typeof sourceIcons] || faGlobe;
+  const sourceIcon = sourceIcons[post.source] || (faGlobe as IconProp);
 
   // Format the publication date
   const publishDate = new Date(post.publishDate);
@@ -115,7 +115,7 @@ export function PostCard({ post }: { post: Post }) {
 
         {/* Publication date */}
         <div className="flex items-center text-slate-400 text-xs mb-4">
-          <FontAwesomeIcon icon={faCalendarAlt} className="mr-1" />
+          <FontAwesomeIcon icon={faCalendarAlt as IconProp} className="mr-1" />
           <span>{formattedDate}</span>
         </div>
 
@@ -151,7 +151,10 @@ export function PostCard({ post }: { post: Post }) {
           className="w-full p-3 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
           whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
         >
-          <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-2" />
+          <FontAwesomeIcon
+            icon={faExternalLinkAlt as IconProp}
+            className="mr-2"
+          />
           <span className="text-sm">View original</span>
         </motion.a>
       </div>

@@ -6,6 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useState } from "react";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export interface Technology {
   name: string;
@@ -84,7 +85,7 @@ export function ProjectCard({ project }: { project: Project }) {
           className="flex-1 p-3 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
           whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
         >
-          <FontAwesomeIcon icon={faGithub} className="mr-2" />
+          <FontAwesomeIcon icon={faGithub as IconProp} className="mr-2" />
           <span className="text-sm">GitHub</span>
         </motion.a>
 
@@ -96,7 +97,10 @@ export function ProjectCard({ project }: { project: Project }) {
             className="flex-1 p-3 flex items-center justify-center text-slate-400 hover:text-teal-400 transition-colors"
             whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
           >
-            <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-2" />
+            <FontAwesomeIcon
+              icon={faExternalLinkAlt as IconProp}
+              className="mr-2"
+            />
             <span className="text-sm">
               {project.demoUrl ? "Demo" : "Video"}
             </span>
