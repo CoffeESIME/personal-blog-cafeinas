@@ -1,37 +1,92 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import React from "react";
+
 const ContactPage: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <ContactSection></ContactSection>
+    <div className="min-h-screen text-white">
+      <div className="container mx-auto px-4 py-16 text-center">
+        <h1 className="text-6xl font-bold mb-6">Contact</h1>
+        <p className="text-xl mb-16">
+          I&apos;m looking forward to connecting with you! Choose the option you
+          prefer to get in touch.
+        </p>
+
+        {/* Contact Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+          {/* Email Card */}
+          <div className="bg-gray-800 rounded-lg p-8 flex flex-col items-center">
+            <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <i className="fas fa-envelope text-2xl"></i>
+            </div>
+            <h2 className="text-xl font-bold mb-2">Email</h2>
+            <p className="text-gray-400">youremail@example.com</p>
+          </div>
+
+          {/* Phone Card */}
+          <div className="bg-gray-800 rounded-lg p-8 flex flex-col items-center">
+            <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <i className="fas fa-phone text-2xl"></i>
+            </div>
+            <h2 className="text-xl font-bold mb-2">Phone</h2>
+            <p className="text-gray-400">+34 123 456 789</p>
+          </div>
+
+          {/* Location Card */}
+          <div className="bg-gray-800 rounded-lg p-8 flex flex-col items-center">
+            <div className="bg-red-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <i className="fas fa-map-marker-alt text-2xl"></i>
+            </div>
+            <h2 className="text-xl font-bold mb-2">Location</h2>
+            <p className="text-gray-400">Madrid, Spain</p>
+          </div>
+        </div>
+
+        {/* Social Media Section */}
+        <h2 className="text-4xl font-bold mb-6">Social Media</h2>
+        <p className="text-xl mb-12">Connect with me on my social networks</p>
+
+        <div className="flex justify-center space-x-12 mb-16">
+          <a href="https://github.com/CoffeESIME" className="block">
+            <div className="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center mb-2">
+              <i className="fab fa-github text-2xl"></i>
+            </div>
+            <p className="mt-2">GitHub</p>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/fabian-romero-hern%C3%A1ndez/"
+            className="block"
+          >
+            <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-2">
+              <i className="fab fa-linkedin-in text-2xl"></i>
+            </div>
+            <p className="mt-2">LinkedIn</p>
+          </a>
+
+          <a href="https://twitter.com" className="block">
+            <div className="bg-blue-400 rounded-full w-16 h-16 flex items-center justify-center mb-2">
+              <i className="fab fa-twitter text-2xl"></i>
+            </div>
+            <p className="mt-2">Twitter</p>
+          </a>
+
+          <a href="https://instagram.com" className="block">
+            <div className="bg-pink-600 rounded-full w-16 h-16 flex items-center justify-center mb-2">
+              <i className="fab fa-instagram text-2xl"></i>
+            </div>
+            <p className="mt-2">Instagram</p>
+          </a>
+        </div>
+
+        <p className="text-lg mb-8">
+          Prefer a more direct contact? Send me an email or give me a call.
+        </p>
+
+        <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg">
+          Send Email Now
+        </button>
+      </div>
     </div>
   );
 };
 
 export default ContactPage;
-
-
-const ContactSection: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center h-screen bg-purple-700 text-white">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-5">Hey there!</h1>
-        <p className="mb-5">I&apos;m always up for a chat.</p>
-        <p>Pop me an email at <a href="mailto:heromfabian@gmail.com" className="text-teal-300 hover:text-teal-500"> &nbsp;heromfabian@gmail.com</a>
-        &nbsp;  or give me a shout on social media.</p>
-        <div className="flex justify-center space-x-4 mt-5">
-          <a href="https://www.linkedin.com/in/fabian-romero-hern%C3%A1ndez/" className="hover:text-gray-300 h-10 w-10">
-            <FontAwesomeIcon icon={faLinkedin} size="2x" />
-          </a>
-          <a href="https://github.com/CoffeESIME" className="hover:text-gray-300 h-10 w-10">
-            <FontAwesomeIcon icon={faGithub} size="2x" />
-          </a>
-          <a href="https://instagram.com" className="hover:text-gray-300 h-10 w-10">
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
