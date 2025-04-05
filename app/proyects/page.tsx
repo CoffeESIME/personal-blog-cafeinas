@@ -1,3 +1,4 @@
+import ProjectsGrid from "@/components/Projects/ProjectsGrid";
 import TechCategories from "@/components/TechStack/TechCategories";
 function ProyectsPage() {
   return (
@@ -15,9 +16,7 @@ function ProyectsPage() {
         <TechCategories />
       </section>
       <section className="my-16">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-          Aqui pondria mis proyectos si tan solo tuviera uno
-        </h2>
+        <ProjectsGrid />
       </section>
     </div>
   );
