@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 interface TechItemProps {
   name: string;
@@ -10,6 +11,8 @@ interface TechItemProps {
 }
 
 export function TechItem({ name, icon, color }: TechItemProps) {
+  const [iconError, setIconError] = useState(false);
+
   return (
     <motion.div
       className="flex flex-col items-center justify-center p-4 bg-slate-800 rounded-lg cursor-pointer relative overflow-hidden group"
@@ -37,15 +40,13 @@ export function TechItem({ name, icon, color }: TechItemProps) {
         transition={{ type: "spring", stiffness: 400 }}
       >
         <Image
-          src={icon}
+          src={iconError ? "/icons/default.svg" : icon}
           alt={`${name} icon`}
           width={48}
           height={48}
           className="object-contain"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = "/icons/default.svg";
-          }}
+          onError={() => setIconError(true)}
+          priority={true}
         />
       </motion.div>
 

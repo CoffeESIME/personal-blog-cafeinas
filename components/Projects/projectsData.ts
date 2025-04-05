@@ -59,13 +59,16 @@ const createTech = (name: string): Technology => ({
   color: techColors[name] || "#999999",
 });
 
+// Since project images may not exist, we'll use a placeholder
+const projectImagePath = "/images/project-placeholder.svg";
+
 export const projectsData: Project[] = [
   {
     id: "portfolio-website",
     title: "Portfolio Website",
     description:
       "Modern portfolio website built with Next.js and Tailwind CSS, featuring animations and responsive design.",
-    image: "/images/portfolio.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("React"),
       createTech("Next.js"),
@@ -81,7 +84,7 @@ export const projectsData: Project[] = [
     title: "Devlogz Blog App",
     description:
       "Mobile blog application built with React Native providing a native experience with offline capabilities.",
-    image: "/images/devlogz.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("React"),
       createTech("JavaScript"),
@@ -96,7 +99,7 @@ export const projectsData: Project[] = [
     title: "Task Management API",
     description:
       "RESTful API for task management developed with Node.js, Express, and MongoDB, featuring JWT authentication.",
-    image: "/images/task-api.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Node.js"),
       createTech("Express"),
@@ -111,7 +114,7 @@ export const projectsData: Project[] = [
     title: "E-commerce Platform",
     description:
       "Complete e-commerce platform with React frontend, Node.js backend, and PostgreSQL database.",
-    image: "/images/ecommerce.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("React"),
       createTech("Node.js"),
@@ -129,7 +132,7 @@ export const projectsData: Project[] = [
     title: "IoT Monitoring System",
     description:
       "IoT monitoring system for industrial devices using Raspberry Pi, MQTT and Node-RED for real-time visualization.",
-    image: "/images/iot-monitoring.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Node-RED"),
       createTech("MQTT"),
@@ -146,7 +149,7 @@ export const projectsData: Project[] = [
     title: "Smart Home Controller",
     description:
       "Home automation controller with Arduino and a web interface for remote control.",
-    image: "/images/smart-home.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Arduino"),
       createTech("HTML/CSS"),
@@ -161,7 +164,7 @@ export const projectsData: Project[] = [
     title: "DevOps CI/CD Pipeline",
     description:
       "Continuous integration and deployment pipeline using GitHub Actions, Docker, and AWS for web applications.",
-    image: "/images/devops.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Docker"),
       createTech("GitHub Actions"),
@@ -177,7 +180,7 @@ export const projectsData: Project[] = [
     title: "Inventory Management System",
     description:
       "Inventory management system with Python/Django backend and React frontend, featuring relational databases.",
-    image: "/images/inventory.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Python"),
       createTech("Django"),
@@ -194,7 +197,7 @@ export const projectsData: Project[] = [
     title: "Blog CMS",
     description:
       "Content management system for blogs with WYSIWYG editor, user management, and traffic analytics.",
-    image: "/images/blog-cms.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Node.js"),
       createTech("React"),
@@ -210,7 +213,7 @@ export const projectsData: Project[] = [
     title: "Dev Toolbox",
     description:
       "Collection of development utilities to optimize workflow, including CLI tools and extensions.",
-    image: "/images/dev-toolbox.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Node.js"),
       createTech("JavaScript"),
@@ -224,7 +227,7 @@ export const projectsData: Project[] = [
     title: "Update Script",
     description:
       "Script to automate system updates and maintenance tasks on Linux servers.",
-    image: "/images/update-script.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Python"),
       createTech("Linux"),
@@ -238,7 +241,7 @@ export const projectsData: Project[] = [
     title: "Music Downloader",
     description:
       "Python tool for downloading music using the yt-dlp library with a simple interface.",
-    image: "/images/music-downloader.jpg",
+    image: projectImagePath,
     technologies: [
       createTech("Python"),
       createTech("HTML/CSS"),

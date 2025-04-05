@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import { useState } from "react";
 
 export interface Technology {
   name: string;
@@ -25,6 +26,8 @@ export interface Project {
 }
 
 export function ProjectCard({ project }: { project: Project }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <motion.div
       className="relative bg-slate-800 rounded-lg overflow-hidden h-full flex flex-col"
@@ -38,15 +41,13 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       <div className="relative h-48 overflow-hidden">
         <Image
-          src={project.image}
+          src={imgError ? "/images/project-placeholder.svg" : project.image}
           alt={project.title}
           fill
           className="object-cover transition-transform group-hover:scale-105"
           style={{ objectFit: "cover" }}
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = "/images/project-placeholder.jpg";
-          }}
+          onError={() => setImgError(true)}
+          priority={true}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70"></div>
       </div>
@@ -69,7 +70,7 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
           {project.technologies.length > 5 && (
             <span className="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300">
-              +{project.technologies.length - 5} más
+              +{project.technologies.length - 5} more
             </span>
           )}
         </div>
