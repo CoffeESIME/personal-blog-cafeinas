@@ -31,22 +31,32 @@ body {
     text-wrap: balance;
   }
 }
-/* styles/ScrollbarStyles.css */
-/* Estilos para todos los scrollbars */
+
+/* Estilos minimalistas para el scrollbar */
 ::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
+  width: 6px; /* Ancho más delgado */
+  height: 6px; /* Altura para scrollbar horizontal */
 }
 
 /* Handle (la parte que se desplaza) */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(99, 102, 241, 0.8); /* Cambia el color al que prefieras */
-  border-radius: 5px; /* Bordes redondeados */
-  border: 2px solid transparent; /* Para un manejo opcional de bordes */
-  background-clip: content-box; /* Evita que el color de fondo se extienda más allá del borde */
+  background-color: rgba(99, 102, 241, 0.3); /* Color más suave */
+  border-radius: 3px; /* Bordes más suaves */
+  transition: background-color 0.2s ease; /* Transición suave */
+}
+
+/* Handle hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(99, 102, 241, 0.5); /* Color más intenso al hover */
 }
 
 /* Track (la parte en la que se desplaza el handle) */
 ::-webkit-scrollbar-track {
-  background: rgba(229, 231, 235, 0.5); /* Cambia al color de fondo que prefieras */
-  border-radius: 5px; /* Bordes redondeados en la pista también */
+  background: transparent; /* Fondo transparente */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin; /* Ancho delgado */
+  scrollbar-color: rgba(99, 102, 241, 0.3) transparent; /* Color del thumb y track */
 }
