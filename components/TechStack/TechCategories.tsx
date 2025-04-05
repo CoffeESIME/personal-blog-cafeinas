@@ -43,9 +43,24 @@ const techCategories = [
       "Systems for efficiently storing, organizing, and retrieving data in applications and systems.",
     technologies: [
       { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
+      { name: "Neo4j", icon: "/icons/neo4j.svg", color: "#018BFF" },
+      { name: "Weaviate", icon: "/icons/weaviate.svg", color: "#FF6D6A" },
       { name: "PostgreSQL", icon: "/icons/postgresql.svg", color: "#336791" },
       { name: "MySQL", icon: "/icons/mysql.svg", color: "#4479A1" },
       { name: "SQL", icon: "/icons/sql.svg", color: "#CC2927" },
+    ],
+  },
+  {
+    id: "ai",
+    title: "AI & Machine Learning",
+    description:
+      "Technologies and frameworks for building intelligent systems, implementing machine learning models, and developing AI applications.",
+    technologies: [
+      { name: "DeepSeek", icon: "/icons/deepseek.svg", color: "#3D7CF9" },
+      { name: "Ollama", icon: "/icons/ollama.svg", color: "#FFFFFF" },
+      { name: "RAG", icon: "/icons/rag.svg", color: "#16E0BD" },
+      { name: "LangChain", icon: "/icons/langchain.svg", color: "#10A37F" },
+      { name: "LLM", icon: "/icons/llm.svg", color: "#8B5CF6" },
     ],
   },
   {
