@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Project, ProjectCard } from "./ProjectCard";
-import { projectsData } from "./projectsData";
+import { projectsData } from "@/components/Projects/projectsData";
 
-// Obtener todas las categorías únicas de los proyectos
+// Get all unique categories for the projects
 const allCategories = [
-  "todos",
+  "all",
   "frontend",
   "backend",
   "database",
@@ -17,22 +17,22 @@ const allCategories = [
 ];
 
 export default function ProjectsGrid() {
-  const [activeCategory, setActiveCategory] = useState("todos");
+  const [activeCategory, setActiveCategory] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Filtrar proyectos cuando cambia la categoría activa o el término de búsqueda
+  // Filter projects when active category or search term changes
   useEffect(() => {
     let result = projectsData;
 
-    // Filtrar por categoría
-    if (activeCategory !== "todos") {
+    // Filter by category
+    if (activeCategory !== "all") {
       result = result.filter((project: Project) =>
         project.category.includes(activeCategory)
       );
     }
 
-    // Filtrar por término de búsqueda
+    // Filter by search term
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
       result = result.filter(
@@ -56,13 +56,13 @@ export default function ProjectsGrid() {
     <div className="my-16">
       <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">
-          Mis Proyectos
+          My Projects
         </h2>
 
         <div className="w-full md:w-auto">
           <input
             type="text"
-            placeholder="Buscar proyectos..."
+            placeholder="Search projects..."
             className="w-full md:w-64 px-4 py-2 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -81,19 +81,19 @@ export default function ProjectsGrid() {
                 : "bg-slate-800 text-slate-300 hover:bg-slate-700"
             }`}
           >
-            {category === "todos"
-              ? "Todos"
+            {category === "all"
+              ? "All"
               : category === "frontend"
               ? "Frontend"
               : category === "backend"
               ? "Backend"
               : category === "database"
-              ? "Bases de Datos"
+              ? "Databases"
               : category === "devops"
               ? "DevOps"
               : category === "iot"
               ? "IoT"
-              : "Herramientas"}
+              : "Tools"}
           </button>
         ))}
       </div>
@@ -104,7 +104,7 @@ export default function ProjectsGrid() {
           animate={{ opacity: 1 }}
           className="text-center py-16 text-slate-400"
         >
-          No se encontraron proyectos que coincidan con tu búsqueda.
+          No projects found matching your search.
         </motion.div>
       ) : (
         <motion.div

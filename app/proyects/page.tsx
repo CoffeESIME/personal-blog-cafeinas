@@ -1,6 +1,7 @@
 import ProjectsGrid from "@/components/Projects/ProjectsGrid";
 import TechCategories from "@/components/TechStack/TechCategories";
-function ProyectsPage() {
+
+function ProjectsPage() {
   return (
     <div className="mt-4 mx-4">
       <section id="skills" className="my-16">
@@ -22,4 +23,4 @@ function ProyectsPage() {
   );
 }
 
-export default ProyectsPage;
+export default ProjectsPage;

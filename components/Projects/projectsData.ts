@@ -1,6 +1,6 @@
 import { Project, Technology } from "./ProjectCard";
 
-// Colores para las tecnologías
+// Colors for technologies
 const techColors: Record<string, string> = {
   // Frontend
   React: "#61DAFB",
@@ -46,11 +46,10 @@ const techColors: Record<string, string> = {
   "Vue.js": "#4FC08D",
   Angular: "#DD0031",
   Sass: "#CC6699",
-  // Añadimos Bash que no estaba en la lista original
   Bash: "#4EAA25",
 };
 
-// Función para crear un objeto Technology
+// Function to create a Technology object
 const createTech = (name: string): Technology => ({
   name,
   icon: `/icons/${name
@@ -65,7 +64,7 @@ export const projectsData: Project[] = [
     id: "portfolio-website",
     title: "Portfolio Website",
     description:
-      "Sitio web de portfolio moderno construido con Next.js y Tailwind CSS, con animaciones y diseño responsivo.",
+      "Modern portfolio website built with Next.js and Tailwind CSS, featuring animations and responsive design.",
     image: "/images/portfolio.jpg",
     technologies: [
       createTech("React"),
@@ -81,7 +80,7 @@ export const projectsData: Project[] = [
     id: "devlogz-blog-app",
     title: "Devlogz Blog App",
     description:
-      "Aplicación móvil para blog de desarrollo con React Native que proporciona una experiencia nativa con capacidades offline.",
+      "Mobile blog application built with React Native providing a native experience with offline capabilities.",
     image: "/images/devlogz.jpg",
     technologies: [
       createTech("React"),
@@ -96,7 +95,7 @@ export const projectsData: Project[] = [
     id: "task-management-api",
     title: "Task Management API",
     description:
-      "API RESTful para gestión de tareas desarrollada con Node.js, Express y MongoDB, con autenticación JWT.",
+      "RESTful API for task management developed with Node.js, Express, and MongoDB, featuring JWT authentication.",
     image: "/images/task-api.jpg",
     technologies: [
       createTech("Node.js"),
@@ -111,7 +110,7 @@ export const projectsData: Project[] = [
     id: "e-commerce-platform",
     title: "E-commerce Platform",
     description:
-      "Plataforma de comercio electrónico completa con frontend en React, backend en Node.js y base de datos PostgreSQL.",
+      "Complete e-commerce platform with React frontend, Node.js backend, and PostgreSQL database.",
     image: "/images/ecommerce.jpg",
     technologies: [
       createTech("React"),
@@ -129,7 +128,7 @@ export const projectsData: Project[] = [
     id: "iot-monitoring-system",
     title: "IoT Monitoring System",
     description:
-      "Sistema de monitoreo IoT para dispositivos industriales utilizando Raspberry Pi, MQTT y Node-RED para visualización en tiempo real.",
+      "IoT monitoring system for industrial devices using Raspberry Pi, MQTT and Node-RED for real-time visualization.",
     image: "/images/iot-monitoring.jpg",
     technologies: [
       createTech("Node-RED"),
@@ -146,7 +145,7 @@ export const projectsData: Project[] = [
     id: "smart-home-controller",
     title: "Smart Home Controller",
     description:
-      "Controlador de domótica para automatización del hogar con Arduino y una interfaz web para control remoto.",
+      "Home automation controller with Arduino and a web interface for remote control.",
     image: "/images/smart-home.jpg",
     technologies: [
       createTech("Arduino"),
@@ -161,7 +160,7 @@ export const projectsData: Project[] = [
     id: "devops-ci-cd-pipeline",
     title: "DevOps CI/CD Pipeline",
     description:
-      "Pipeline de integración y despliegue continuo utilizando GitHub Actions, Docker y AWS para aplicaciones web.",
+      "Continuous integration and deployment pipeline using GitHub Actions, Docker, and AWS for web applications.",
     image: "/images/devops.jpg",
     technologies: [
       createTech("Docker"),
@@ -177,7 +176,7 @@ export const projectsData: Project[] = [
     id: "inventory-management-system",
     title: "Inventory Management System",
     description:
-      "Sistema de gestión de inventario con backend en Python/Django y frontend en React, con bases de datos relacionales.",
+      "Inventory management system with Python/Django backend and React frontend, featuring relational databases.",
     image: "/images/inventory.jpg",
     technologies: [
       createTech("Python"),
@@ -194,7 +193,7 @@ export const projectsData: Project[] = [
     id: "blog-cms",
     title: "Blog CMS",
     description:
-      "Sistema de gestión de contenidos para blogs con editor WYSIWYG, gestión de usuarios y análisis de tráfico.",
+      "Content management system for blogs with WYSIWYG editor, user management, and traffic analytics.",
     image: "/images/blog-cms.jpg",
     technologies: [
       createTech("Node.js"),
@@ -210,7 +209,7 @@ export const projectsData: Project[] = [
     id: "dev-toolbox",
     title: "Dev Toolbox",
     description:
-      "Colección de utilidades de desarrollo para optimizar el flujo de trabajo, incluyendo herramientas CLI y extensiones.",
+      "Collection of development utilities to optimize workflow, including CLI tools and extensions.",
     image: "/images/dev-toolbox.jpg",
     technologies: [
       createTech("Node.js"),
@@ -224,7 +223,7 @@ export const projectsData: Project[] = [
     id: "update-script",
     title: "Update Script",
     description:
-      "Script para automatizar actualizaciones del sistema y tareas de mantenimiento en servidores Linux.",
+      "Script to automate system updates and maintenance tasks on Linux servers.",
     image: "/images/update-script.jpg",
     technologies: [
       createTech("Python"),
@@ -238,7 +237,7 @@ export const projectsData: Project[] = [
     id: "music-downloader",
     title: "Music Downloader",
     description:
-      "Herramienta de Python para descargar música utilizando la biblioteca yt-dlp con una interfaz sencilla.",
+      "Python tool for downloading music using the yt-dlp library with a simple interface.",
     image: "/images/music-downloader.jpg",
     technologies: [
       createTech("Python"),

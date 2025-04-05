@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { TechItem } from "./TechItem";
+import { useState, useEffect } from "react";
+import { TechItem } from "@/components/TechStack/TechItem";
 
-// Definición de las categorías y tecnologías
+// Technology categories definition and data
 const techCategories = [
   {
     id: "frontend",
-    title: "Desarrollo Frontend",
+    title: "Frontend Development",
     description:
-      "Tecnologías para crear interfaces de usuario interactivas y responsivas que mejoran la experiencia del usuario final.",
+      "Technologies for creating interactive and responsive user interfaces that enhance the end-user experience.",
     technologies: [
       { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
       { name: "Next.js", icon: "/icons/nextjs.svg", color: "#000000" },
@@ -23,9 +23,9 @@ const techCategories = [
   },
   {
     id: "backend",
-    title: "Desarrollo Backend",
+    title: "Backend Development",
     description:
-      "Tecnologías para construir la lógica del servidor, procesar datos y conectar con bases de datos, APIs y servicios externos.",
+      "Technologies for building server logic, processing data, and connecting with databases, APIs, and external services.",
     technologies: [
       { name: "Node.js", icon: "/icons/nodejs.svg", color: "#339933" },
       { name: "Express", icon: "/icons/express.svg", color: "#000000" },
@@ -38,9 +38,9 @@ const techCategories = [
   },
   {
     id: "databases",
-    title: "Bases de Datos",
+    title: "Databases",
     description:
-      "Sistemas para almacenar, organizar y recuperar datos de manera eficiente en aplicaciones y sistemas.",
+      "Systems for efficiently storing, organizing, and retrieving data in applications and systems.",
     technologies: [
       { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
       { name: "PostgreSQL", icon: "/icons/postgresql.svg", color: "#336791" },
@@ -50,9 +50,9 @@ const techCategories = [
   },
   {
     id: "devops",
-    title: "DevOps e Infraestructura",
+    title: "DevOps & Infrastructure",
     description:
-      "Herramientas y prácticas para la automatización, integración continua, despliegue y gestión de infraestructura.",
+      "Tools and practices for automation, continuous integration, deployment, and infrastructure management.",
     technologies: [
       { name: "AWS", icon: "/icons/aws.svg", color: "#FF9900" },
       { name: "Docker", icon: "/icons/docker.svg", color: "#2496ED" },
@@ -69,9 +69,9 @@ const techCategories = [
   },
   {
     id: "iot",
-    title: "IoT y Sistemas Embebidos",
+    title: "IoT & Embedded Systems",
     description:
-      "Tecnologías para desarrollar dispositivos conectados, automatizaciones y soluciones de Internet de las Cosas.",
+      "Technologies for developing connected devices, automations, and Internet of Things solutions.",
     technologies: [
       { name: "Node-RED", icon: "/icons/nodered.svg", color: "#8F0000" },
       { name: "MQTT", icon: "/icons/mqtt.svg", color: "#660066" },
@@ -91,9 +91,9 @@ const techCategories = [
   },
   {
     id: "tools",
-    title: "Herramientas y Metodologías",
+    title: "Tools & Methodologies",
     description:
-      "Herramientas para el desarrollo, pruebas, gestión de proyectos y mejora de la calidad del código.",
+      "Tools for development, testing, project management, and code quality improvement.",
     technologies: [
       { name: "Git", icon: "/icons/git.svg", color: "#F05032" },
       { name: "Jira", icon: "/icons/jira.svg", color: "#0052CC" },
@@ -106,8 +106,31 @@ const techCategories = [
   },
 ];
 
+// Get all unique category IDs for filtering
+const allCategories = techCategories.map((category) => category.id);
+
 export default function TechCategories() {
   const [activeCategory, setActiveCategory] = useState("frontend");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredTechnologies, setFilteredTechnologies] = useState<any[]>([]);
+
+  // Filter technologies when activeCategory or searchTerm changes
+  useEffect(() => {
+    // Find the active category
+    const category = techCategories.find((cat) => cat.id === activeCategory);
+
+    if (!category) return;
+
+    let result = [...category.technologies];
+
+    // Filter by search term if it exists
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      result = result.filter((tech) => tech.name.toLowerCase().includes(term));
+    }
+
+    setFilteredTechnologies(result);
+  }, [activeCategory, searchTerm]);
 
   const handleCategoryClick = (categoryId: string) => {
     setActiveCategory(categoryId);
@@ -115,11 +138,23 @@ export default function TechCategories() {
 
   return (
     <div className="my-16">
-      <h2 className="text-2xl font-bold mb-8 text-neutral-900 dark:text-white">
-        Mi Stack Tecnológico
-      </h2>
+      <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">
+          My Tech Stack
+        </h2>
 
-      <div className="flex flex-wrap gap-2 mb-6">
+        <div className="w-full md:w-auto">
+          <input
+            type="text"
+            placeholder="Search technologies..."
+            className="w-full md:w-64 px-4 py-2 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-8">
         {techCategories.map((category) => (
           <button
             key={category.id}
@@ -146,16 +181,39 @@ export default function TechCategories() {
             </h3>
             <p className="text-slate-400 mb-6">{category.description}</p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {category.technologies.map((tech) => (
-                <TechItem
-                  key={tech.name}
-                  name={tech.name}
-                  icon={tech.icon}
-                  color={tech.color}
-                />
-              ))}
-            </div>
+            {filteredTechnologies.length === 0 ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-16 text-slate-400"
+              >
+                No technologies found matching your search.
+              </motion.div>
+            ) : (
+              <motion.div
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.1,
+                    },
+                  },
+                }}
+              >
+                {filteredTechnologies.map((tech) => (
+                  <TechItem
+                    key={tech.name}
+                    name={tech.name}
+                    icon={tech.icon}
+                    color={tech.color}
+                  />
+                ))}
+              </motion.div>
+            )}
           </div>
         </div>
       ))}
