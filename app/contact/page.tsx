@@ -18,16 +18,7 @@ const ContactPage: React.FC = () => {
               <i className="fas fa-envelope text-2xl"></i>
             </div>
             <h2 className="text-xl font-bold mb-2">Email</h2>
-            <p className="text-gray-400">youremail@example.com</p>
-          </div>
-
-          {/* Phone Card */}
-          <div className="bg-gray-800 rounded-lg p-8 flex flex-col items-center">
-            <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-              <i className="fas fa-phone text-2xl"></i>
-            </div>
-            <h2 className="text-xl font-bold mb-2">Phone</h2>
-            <p className="text-gray-400">+34 123 456 789</p>
+            <p className="text-gray-400">heromfabian@gmail.com</p>
           </div>
 
           {/* Location Card */}
@@ -36,7 +27,7 @@ const ContactPage: React.FC = () => {
               <i className="fas fa-map-marker-alt text-2xl"></i>
             </div>
             <h2 className="text-xl font-bold mb-2">Location</h2>
-            <p className="text-gray-400">Madrid, Spain</p>
+            <p className="text-gray-400">México, CDMX</p>
           </div>
         </div>
 
@@ -61,29 +52,18 @@ const ContactPage: React.FC = () => {
             </div>
             <p className="mt-2">LinkedIn</p>
           </a>
-
-          <a href="https://twitter.com" className="block">
-            <div className="bg-blue-400 rounded-full w-16 h-16 flex items-center justify-center mb-2">
-              <i className="fab fa-twitter text-2xl"></i>
-            </div>
-            <p className="mt-2">Twitter</p>
-          </a>
-
-          <a href="https://instagram.com" className="block">
-            <div className="bg-pink-600 rounded-full w-16 h-16 flex items-center justify-center mb-2">
-              <i className="fab fa-instagram text-2xl"></i>
-            </div>
-            <p className="mt-2">Instagram</p>
-          </a>
         </div>
 
         <p className="text-lg mb-8">
           Prefer a more direct contact? Send me an email or give me a call.
         </p>
 
-        <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg">
+        <a
+          href="mailto:heromfabian@gmail.com"
+          className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg inline-block"
+        >
           Send Email Now
-        </button>
+        </a>
       </div>
     </div>
   );

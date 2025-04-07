@@ -34,7 +34,7 @@ export const postsData: Post[] = [
       "Video exploring the poetry of walking through mountains and trails.",
     image: placeholderImagePath,
     source: "tiktok",
-    sourceUrl: "https://tiktok.com/@username/video/123456", // Update with real URL
+    sourceUrl: "https://www.tiktok.com/@drunkblic/video/7485832155671579909", // Update with real URL
     publishDate: "2024-04-01",
     tags: [createTag("Video"), createTag("Mountains"), createTag("Poetry")],
   },
@@ -44,7 +44,7 @@ export const postsData: Post[] = [
     description: "Visual exploration of the majesty and height of mountains.",
     image: placeholderImagePath,
     source: "tiktok",
-    sourceUrl: "https://tiktok.com/@username/video/123457", // Update with real URL
+    sourceUrl: "https://www.tiktok.com/@drunkblic/video/7412435105823739141", // Update with real URL
     publishDate: "2024-04-02",
     tags: [createTag("Video"), createTag("Mountains"), createTag("Height")],
   },
@@ -54,7 +54,7 @@ export const postsData: Post[] = [
     description: "A visual reflection on the experience and art of walking.",
     image: placeholderImagePath,
     source: "tiktok",
-    sourceUrl: "https://tiktok.com/@username/video/123458", // Update with real URL
+    sourceUrl: "https://www.tiktok.com/@drunkblic/video/7391241244950662405", // Update with real URL
     publishDate: "2024-04-03",
     tags: [createTag("Video"), createTag("Walking"), createTag("Reflection")],
   },
@@ -65,7 +65,7 @@ export const postsData: Post[] = [
       "Exploration of when and how we began measuring the height of mountains.",
     image: placeholderImagePath,
     source: "tiktok",
-    sourceUrl: "https://tiktok.com/@username/video/123459", // Update with real URL
+    sourceUrl: "https://www.tiktok.com/@drunkblic/video/7418021655647194373", // Update with real URL
     publishDate: "2024-04-04",
     tags: [createTag("Video"), createTag("History"), createTag("Mountains")],
   },
@@ -76,35 +76,9 @@ export const postsData: Post[] = [
       "Poetic and philosophical analysis on the work and legacy of Omar Khayyam.",
     image: placeholderImagePath,
     source: "medium",
-    sourceUrl: "https://medium.com/@yourusername/omar-khayyam", // Update with real URL
+    sourceUrl: "https://medium.com/@heromfabian/a-poetic-toast-59406d3b51e5", // Update with real URL
     publishDate: "2024-04-05",
     tags: [createTag("Medium"), createTag("Omar Khayyam"), createTag("Poetry")],
-  },
-  {
-    id: "blog-post-graphs",
-    title: "Graphs and Connections: An Analysis",
-    description:
-      "Exploration of graph theory and its application in knowledge organization.",
-    image: placeholderImagePath,
-    source: "blog",
-    sourceUrl: "https://your-site.com/graphs", // Update with real URL if needed
-    publishDate: "2024-04-06",
-    tags: [createTag("Graphs"), createTag("Mathematics"), createTag("Theory")],
-  },
-  {
-    id: "blog-post-knowledge-organization",
-    title: "Knowledge Organization: Personal Project",
-    description:
-      "Presentation of my project to systematize and organize knowledge.",
-    image: placeholderImagePath,
-    source: "blog",
-    sourceUrl: "https://your-site.com/knowledge-organization", // Update with real URL
-    publishDate: "2024-04-07",
-    tags: [
-      createTag("Project"),
-      createTag("Knowledge"),
-      createTag("Organization"),
-    ],
   },
   {
     id: "tumblr-post-quotes",
@@ -113,7 +87,7 @@ export const postsData: Post[] = [
       "Collection of selected quotes to inspire, accessible via Tumblr with filters.",
     image: placeholderImagePath,
     source: "tumblr",
-    sourceUrl: "https://yourusername.tumblr.com/tagged/quotes", // Update with real URL
+    sourceUrl: "https://drunkblic.tumblr.com/", // Update with real URL
     publishDate: "2024-04-08",
     tags: [createTag("Quotes"), createTag("Inspiration"), createTag("Sayings")],
   },

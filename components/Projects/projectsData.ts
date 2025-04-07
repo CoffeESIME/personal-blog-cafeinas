@@ -32,49 +32,24 @@ const projectImagePath = "/images/project-placeholder.svg";
 
 export const projectsData: Project[] = [
   {
-    id: "birds-music-api",
-    title: "Birds and Music API",
-    description:
-      "API built with Flask, YouTube Music API, and Docker to explore music related to birds.",
-    image: projectImagePath,
-    technologies: [createTech("Docker"), createTech("Python")],
-    category: ["backend"],
-    githubUrl: "",
-  },
-  {
-    id: "raspberry-api-server",
-    title: "Raspberry Pi API Server",
-    description:
-      "Automatically deployed API server on Raspberry Pi using Docker and GitHub Actions.",
-    image: projectImagePath,
-    technologies: [createTech("RaspberryPi"), createTech("Docker")],
-    category: ["iot", "backend"],
-    githubUrl: "",
-  },
-  {
     id: "scada-telemetry",
     title: "SCADA/Telemetry",
     description:
       "SCADA project for real-time monitoring and control aimed at degree certification.",
     image: projectImagePath,
-    technologies: [createTech("Python"), createTech("RaspberryPi")],
-    category: ["iot", "backend"],
-    githubUrl: "",
-  },
-  {
-    id: "mountains-encyclopedia",
-    title: "Mountains Encyclopedia",
-    description:
-      "Interactive knowledge base about mountains using Neo4j or MongoDB.",
-    image: projectImagePath,
     technologies: [
-      createTech("Neo4j"),
-      createTech("MongoDB"),
-      createTech("SQL"),
+      createTech("Next.js"),
+      createTech("Typescript"),
+      createTech("RaspberryPi"),
+      createTech("arduino"),
+      createTech("MQTT"),
+      createTech("Modbus"),
+      createTech("Embedded C"),
     ],
-    category: ["database", "frontend", "backend"],
-    githubUrl: "",
+    category: ["iot", "backend", "frontend"],
+    githubUrl: "https://github.com/CoffeESIME/react-scada-hmi",
   },
+
   {
     id: "hiking-backend",
     title: "Hiking Routes Backend",
@@ -83,7 +58,7 @@ export const projectsData: Project[] = [
     image: projectImagePath,
     technologies: [createTech("NestJS"), createTech("TypeScript")],
     category: ["backend"],
-    githubUrl: "",
+    githubUrl: "https://github.com/CoffeESIME/creatormaps",
   },
   {
     id: "routes-frontend",
@@ -97,10 +72,10 @@ export const projectsData: Project[] = [
       createTech("Tailwind"),
     ],
     category: ["frontend"],
-    githubUrl: "",
+    githubUrl: "https://github.com/CoffeESIME/personalized-map",
   },
   {
-    id: "knowledge-graph-app",
+    id: "knowledge-graph-app - Categorizer",
     title: "Knowledge Graph Visualization",
     description: "Interactive app for exploring knowledge graphs using Neo4j.",
     image: projectImagePath,
@@ -110,7 +85,7 @@ export const projectsData: Project[] = [
       createTech("TypeScript"),
     ],
     category: ["frontend", "database"],
-    githubUrl: "",
+    githubUrl: "https://github.com/CoffeESIME/categorizer",
   },
   {
     id: "quotes-app-terraform",
