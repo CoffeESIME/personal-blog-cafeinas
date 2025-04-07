@@ -12,13 +12,14 @@ const techCategories = [
     description:
       "Technologies for creating interactive and responsive user interfaces that enhance the end-user experience.",
     technologies: [
-      { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
-      { name: "Next.js", icon: "/icons/nextjs.svg", color: "#000000" },
+      { name: "React", icon: "/icons/React.svg", color: "#61DAFB" },
+      { name: "Next.js", icon: "/icons/Next.js.svg", color: "#000000" },
       { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
-      { name: "TypeScript", icon: "/icons/typescript.svg", color: "#3178C6" },
+      { name: "TypeScript", icon: "/icons/TypeScript.svg", color: "#3178C6" },
       { name: "Tailwind", icon: "/icons/tailwind.svg", color: "#06B6D4" },
-      { name: "HTML/CSS", icon: "/icons/html5.svg", color: "#E34F26" },
-      { name: "Material-UI", icon: "/icons/materialui.svg", color: "#0081CB" },
+      { name: "Astro", icon: "/icons/Astro.svg", color: "#FF5D01" },
+      { name: "p5.js", icon: "/icons/p5JS.svg", color: "#ED225D" },
+      { name: "Redux", icon: "/icons/Redux.svg", color: "#764ABC" },
     ],
   },
   {
@@ -27,13 +28,15 @@ const techCategories = [
     description:
       "Technologies for building server logic, processing data, and connecting with databases, APIs, and external services.",
     technologies: [
-      { name: "Node.js", icon: "/icons/nodejs.svg", color: "#339933" },
-      { name: "Express", icon: "/icons/express.svg", color: "#000000" },
-      { name: "NestJS", icon: "/icons/nestjs.svg", color: "#E0234E" },
-      { name: "Django", icon: "/icons/django.svg", color: "#092E20" },
-      { name: "Python", icon: "/icons/python.svg", color: "#3776AB" },
-      { name: "Java", icon: "/icons/java.svg", color: "#007396" },
-      { name: "GraphQL", icon: "/icons/graphql.svg", color: "#E10098" },
+      { name: "Node.js", icon: "/icons/Node.js.svg", color: "#339933" },
+      { name: "Express", icon: "/icons/default.svg", color: "#000000" },
+      { name: "NestJS", icon: "/icons/Nest.js.svg", color: "#E0234E" },
+      { name: "Django", icon: "/icons/Django.svg", color: "#092E20" },
+      { name: "Django REST", icon: "/icons/DjangoREST.svg", color: "#A30000" },
+      { name: "Python", icon: "/icons/Python.svg", color: "#3776AB" },
+      { name: "GraphQL", icon: "/icons/graph-ql.svg", color: "#E10098" },
+      { name: "Socket.io", icon: "/icons/Socket.io.svg", color: "#010101" },
+      { name: "PHP", icon: "/icons/PHP.svg", color: "#777BB4" },
     ],
   },
   {
@@ -42,12 +45,15 @@ const techCategories = [
     description:
       "Systems for efficiently storing, organizing, and retrieving data in applications and systems.",
     technologies: [
-      { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
-      { name: "Neo4j", icon: "/icons/neo4j.svg", color: "#018BFF" },
-      { name: "Weaviate", icon: "/icons/weaviate.svg", color: "#FF6D6A" },
-      { name: "PostgreSQL", icon: "/icons/postgresql.svg", color: "#336791" },
-      { name: "MySQL", icon: "/icons/mysql.svg", color: "#4479A1" },
-      { name: "SQL", icon: "/icons/sql.svg", color: "#CC2927" },
+      { name: "MongoDB", icon: "/icons/MongoDB.svg", color: "#47A248" },
+      { name: "Neo4j", icon: "/icons/Neo4j.svg", color: "#018BFF" },
+      { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg", color: "#336791" },
+      { name: "MySQL", icon: "/icons/MySQL.svg", color: "#4479A1" },
+      {
+        name: "Graph Theory",
+        icon: "/icons/graph-theory.svg",
+        color: "#FF6D6A",
+      },
     ],
   },
   {
@@ -58,8 +64,8 @@ const techCategories = [
     technologies: [
       { name: "DeepSeek", icon: "/icons/deepseek.svg", color: "#3D7CF9" },
       { name: "Ollama", icon: "/icons/ollama.svg", color: "#FFFFFF" },
-      { name: "RAG", icon: "/icons/rag.svg", color: "#16E0BD" },
-      { name: "LangChain", icon: "/icons/langchain.svg", color: "#10A37F" },
+      { name: "LLaVA", icon: "/icons/llava.svg", color: "#10A37F" },
+      { name: "Hunyuan", icon: "/icons/hunyuan.svg", color: "#0084FF" },
       { name: "LLM", icon: "/icons/llm.svg", color: "#8B5CF6" },
     ],
   },
@@ -69,17 +75,23 @@ const techCategories = [
     description:
       "Tools and practices for automation, continuous integration, deployment, and infrastructure management.",
     technologies: [
-      { name: "AWS", icon: "/icons/aws.svg", color: "#FF9900" },
-      { name: "Docker", icon: "/icons/docker.svg", color: "#2496ED" },
+      { name: "AWS", icon: "/icons/AWS.svg", color: "#FF9900" },
+      { name: "Docker", icon: "/icons/default.svg", color: "#2496ED" },
       {
         name: "GitHub Actions",
-        icon: "/icons/githubactions.svg",
+        icon: "/icons/GitHubActions.svg",
         color: "#2088FF",
       },
-      { name: "Terraform", icon: "/icons/terraform.svg", color: "#7B42BC" },
-      { name: "Linux", icon: "/icons/linux.svg", color: "#FCC624" },
-      { name: "Apache", icon: "/icons/apache.svg", color: "#D22128" },
-      { name: "Nginx", icon: "/icons/nginx.svg", color: "#009639" },
+      {
+        name: "Terraform",
+        icon: "/icons/HashiCorpTerraform.svg",
+        color: "#7B42BC",
+      },
+      { name: "Linux", icon: "/icons/Linux.svg", color: "#FCC624" },
+      { name: "Ubuntu", icon: "/icons/Ubuntu.svg", color: "#E95420" },
+      { name: "NGINX", icon: "/icons/NGINX.svg", color: "#009639" },
+      { name: "ESLint", icon: "/icons/ESLint.svg", color: "#4B32C3" },
+      { name: "NPM", icon: "/icons/NPM.svg", color: "#CB3837" },
     ],
   },
   {
@@ -88,20 +100,18 @@ const techCategories = [
     description:
       "Technologies for developing connected devices, automations, and Internet of Things solutions.",
     technologies: [
-      { name: "Node-RED", icon: "/icons/nodered.svg", color: "#8F0000" },
-      { name: "MQTT", icon: "/icons/mqtt.svg", color: "#660066" },
-      { name: "Arduino", icon: "/icons/arduino.svg", color: "#00979D" },
+      { name: "Node-RED", icon: "/icons/node-red.svg", color: "#8F0000" },
+      { name: "MQTT", icon: "/icons/Mqtt.svg", color: "#660066" },
+      { name: "Arduino", icon: "/icons/Arduino.svg", color: "#00979D" },
       {
         name: "Raspberry Pi",
-        icon: "/icons/raspberrypi.svg",
+        icon: "/icons/RaspberryPi.svg",
         color: "#A22846",
       },
-      { name: "PLC", icon: "/icons/plc.svg", color: "#FF5722" },
-      {
-        name: "Siemens TIA Portal",
-        icon: "/icons/siemens.svg",
-        color: "#009999",
-      },
+      { name: "Siemens", icon: "/icons/siemens.svg", color: "#009999" },
+      { name: "SCADA", icon: "/icons/scada.svg", color: "#FF5722" },
+      { name: "Drone", icon: "/icons/drone.svg", color: "#00AEEF" },
+      { name: "Embedded C", icon: "/icons/EmbeddedC.svg", color: "#A8B9CC" },
     ],
   },
   {
@@ -110,13 +120,44 @@ const techCategories = [
     description:
       "Tools for development, testing, project management, and code quality improvement.",
     technologies: [
-      { name: "Git", icon: "/icons/git.svg", color: "#F05032" },
-      { name: "Jira", icon: "/icons/jira.svg", color: "#0052CC" },
-      { name: "SonarQube", icon: "/icons/sonarqube.svg", color: "#4E9BCD" },
-      { name: "Swagger", icon: "/icons/swagger.svg", color: "#85EA2D" },
-      { name: "Checkmarx", icon: "/icons/checkmarx.svg", color: "#D9232E" },
+      { name: "Git", icon: "/icons/Git.svg", color: "#F05032" },
+      { name: "GitHub", icon: "/icons/GitHub.svg", color: "#181717" },
+      { name: "BitBucket", icon: "/icons/BitBucket.svg", color: "#0052CC" },
+      { name: "Jira", icon: "/icons/Jira.svg", color: "#0052CC" },
+      { name: "Confluence", icon: "/icons/Confluence.svg", color: "#172B4D" },
+      { name: "SonarQube", icon: "/icons/SonarQube.svg", color: "#4E9BCD" },
+      { name: "Postman", icon: "/icons/Postman.svg", color: "#FF6C37" },
+      { name: "Figma", icon: "/icons/Figma.svg", color: "#F24E1E" },
+      { name: "Blender", icon: "/icons/Blender.svg", color: "#F5792A" },
+      { name: "GIMP", icon: "/icons/GIMP.svg", color: "#5C5543" },
+      { name: "PuTTY", icon: "/icons/PuTTY.svg", color: "#0000CE" },
+      { name: "FileZilla", icon: "/icons/FileZilla.svg", color: "#BF0000" },
+    ],
+  },
+  {
+    id: "languages",
+    title: "Programming Languages & Shells",
+    description:
+      "Core programming languages and command-line interfaces used across projects.",
+    technologies: [
+      { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
+      { name: "TypeScript", icon: "/icons/TypeScript.svg", color: "#3178C6" },
+      { name: "Python", icon: "/icons/Python.svg", color: "#3776AB" },
+      { name: "Bash", icon: "/icons/Bash.svg", color: "#4EAA25" },
+      { name: "PowerShell", icon: "/icons/Powershell.svg", color: "#5391FE" },
       { name: "MATLAB", icon: "/icons/matlab.svg", color: "#0076A8" },
-      { name: "SolidWorks", icon: "/icons/solidworks.svg", color: "#DS2226" },
+    ],
+  },
+  {
+    id: "design",
+    title: "Design & 3D Modeling",
+    description:
+      "Tools for creating visual designs, 3D models, and technical drawings.",
+    technologies: [
+      { name: "Figma", icon: "/icons/Figma.svg", color: "#F24E1E" },
+      { name: "Blender", icon: "/icons/Blender.svg", color: "#F5792A" },
+      { name: "GIMP", icon: "/icons/GIMP.svg", color: "#5C5543" },
+      { name: "SolidWorks", icon: "/icons/solidworks.svg", color: "#D82526" },
     ],
   },
 ];

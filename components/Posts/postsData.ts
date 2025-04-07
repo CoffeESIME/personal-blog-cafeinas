@@ -10,13 +10,13 @@ const sourceColors: Record<string, string> = {
   medium: "#000000", // Medium Black
 };
 
-// Create function to generate tags with predefined colors
+// Function to generate tags with random pastel colors
 const createTag = (name: string): Tag => ({
   name,
   color: getRandomPastelColor(),
 });
 
-// Function to generate random pastel colors for tags
+// Generates a random pastel color
 function getRandomPastelColor(): string {
   const hue = Math.floor(Math.random() * 360);
   return `hsl(${hue}, 70%, 80%)`;
@@ -25,113 +25,101 @@ function getRandomPastelColor(): string {
 // Placeholder image path
 const placeholderImagePath = "/images/post-placeholder.svg";
 
-// Example data for posts
+// Updated post data according to requirements for CV
 export const postsData: Post[] = [
   {
-    id: "blog-post-1",
-    title: "How to optimize performance in your React applications",
+    id: "video-post-poetics-walking",
+    title: "Poetics of Walking: Mountains and Trails",
     description:
-      "Complete guide on best practices to improve performance in React",
-    image: placeholderImagePath,
-    source: "blog",
-    sourceUrl: "#",
-    publishDate: "2023-12-15",
-    tags: [
-      createTag("React"),
-      createTag("Performance"),
-      createTag("JavaScript"),
-    ],
-  },
-  {
-    id: "tiktok-post-1",
-    title: "Quick tutorial: CSS Grid in 60 seconds",
-    description: "Learn the basics of CSS Grid in less than a minute",
+      "Video exploring the poetry of walking through mountains and trails.",
     image: placeholderImagePath,
     source: "tiktok",
-    sourceUrl: "https://tiktok.com/@username/video/123456789",
-    publishDate: "2024-01-05",
-    tags: [createTag("CSS"), createTag("Design"), createTag("FrontEnd")],
+    sourceUrl: "https://tiktok.com/@username/video/123456", // Update with real URL
+    publishDate: "2024-04-01",
+    tags: [createTag("Video"), createTag("Mountains"), createTag("Poetry")],
   },
   {
-    id: "instagram-post-1",
-    title: "Before vs after: Dashboard UI redesign",
+    id: "video-post-majestic-heights",
+    title: "Majestic Heights: Mountain Video",
+    description: "Visual exploration of the majesty and height of mountains.",
+    image: placeholderImagePath,
+    source: "tiktok",
+    sourceUrl: "https://tiktok.com/@username/video/123457", // Update with real URL
+    publishDate: "2024-04-02",
+    tags: [createTag("Video"), createTag("Mountains"), createTag("Height")],
+  },
+  {
+    id: "video-post-the-walk",
+    title: "The Path: Reflection on Walking",
+    description: "A visual reflection on the experience and art of walking.",
+    image: placeholderImagePath,
+    source: "tiktok",
+    sourceUrl: "https://tiktok.com/@username/video/123458", // Update with real URL
+    publishDate: "2024-04-03",
+    tags: [createTag("Video"), createTag("Walking"), createTag("Reflection")],
+  },
+  {
+    id: "video-post-measuring-mountains",
+    title: "Measuring Mountains: Origins of Measurement",
     description:
-      "Complete transformation of an outdated user interface to a modern one",
+      "Exploration of when and how we began measuring the height of mountains.",
     image: placeholderImagePath,
-    source: "instagram",
-    sourceUrl: "https://instagram.com/p/abcdefg",
-    publishDate: "2024-02-10",
-    tags: [createTag("UI"), createTag("Design"), createTag("UX")],
+    source: "tiktok",
+    sourceUrl: "https://tiktok.com/@username/video/123459", // Update with real URL
+    publishDate: "2024-04-04",
+    tags: [createTag("Video"), createTag("History"), createTag("Mountains")],
   },
   {
-    id: "youtube-post-1",
-    title: "Creating a complete REST API with Node.js and Express",
-    description: "Step-by-step tutorial to develop a robust and scalable API",
-    image: placeholderImagePath,
-    source: "youtube",
-    sourceUrl: "https://youtube.com/watch?v=abcdefg",
-    publishDate: "2024-03-01",
-    tags: [createTag("Node.js"), createTag("API"), createTag("Backend")],
-  },
-  {
-    id: "tumblr-post-1",
-    title: "The future of programming: Web Assembly",
-    description: "Analysis on how WASM is changing web development",
-    image: placeholderImagePath,
-    source: "tumblr",
-    sourceUrl: "https://username.tumblr.com/post/123456789",
-    publishDate: "2024-01-22",
-    tags: [
-      createTag("WebAssembly"),
-      createTag("Future"),
-      createTag("Technology"),
-    ],
-  },
-  {
-    id: "medium-post-1",
-    title: "Microservices vs Monoliths: Which one to choose?",
-    description: "Detailed comparison of modern software architectures",
+    id: "medium-post-omar-khayyam",
+    title: "Omar Khayyam: Verses and Reflections",
+    description:
+      "Poetic and philosophical analysis on the work and legacy of Omar Khayyam.",
     image: placeholderImagePath,
     source: "medium",
-    sourceUrl: "https://medium.com/@username/microservices-vs-monoliths",
-    publishDate: "2024-02-18",
-    tags: [
-      createTag("Architecture"),
-      createTag("Microservices"),
-      createTag("DevOps"),
-    ],
+    sourceUrl: "https://medium.com/@yourusername/omar-khayyam", // Update with real URL
+    publishDate: "2024-04-05",
+    tags: [createTag("Medium"), createTag("Omar Khayyam"), createTag("Poetry")],
   },
   {
-    id: "blog-post-2",
-    title: "TypeScript: Advanced types you should know",
-    description: "Exploring advanced features of TypeScript's type system",
+    id: "blog-post-graphs",
+    title: "Graphs and Connections: An Analysis",
+    description:
+      "Exploration of graph theory and its application in knowledge organization.",
     image: placeholderImagePath,
     source: "blog",
-    sourceUrl: "#",
-    publishDate: "2024-03-10",
+    sourceUrl: "https://your-site.com/graphs", // Update with real URL if needed
+    publishDate: "2024-04-06",
+    tags: [createTag("Graphs"), createTag("Mathematics"), createTag("Theory")],
+  },
+  {
+    id: "blog-post-knowledge-organization",
+    title: "Knowledge Organization: Personal Project",
+    description:
+      "Presentation of my project to systematize and organize knowledge.",
+    image: placeholderImagePath,
+    source: "blog",
+    sourceUrl: "https://your-site.com/knowledge-organization", // Update with real URL
+    publishDate: "2024-04-07",
     tags: [
-      createTag("TypeScript"),
-      createTag("Programming"),
-      createTag("JavaScript"),
+      createTag("Project"),
+      createTag("Knowledge"),
+      createTag("Organization"),
     ],
   },
   {
-    id: "instagram-post-2",
-    title: "Minimalist setup for programmers",
-    description: "My desk configuration for maximum productivity",
+    id: "tumblr-post-quotes",
+    title: "Inspiring Quotes",
+    description:
+      "Collection of selected quotes to inspire, accessible via Tumblr with filters.",
     image: placeholderImagePath,
-    source: "instagram",
-    sourceUrl: "https://instagram.com/p/hijklmn",
-    publishDate: "2024-03-15",
-    tags: [
-      createTag("Setup"),
-      createTag("Productivity"),
-      createTag("Workspace"),
-    ],
+    source: "tumblr",
+    sourceUrl: "https://yourusername.tumblr.com/tagged/quotes", // Update with real URL
+    publishDate: "2024-04-08",
+    tags: [createTag("Quotes"), createTag("Inspiration"), createTag("Sayings")],
   },
 ];
 
-// Get all unique tags from posts
+// Gets all unique tags from posts
 export const getAllTags = (): string[] => {
   const tagsSet = new Set<string>();
 
@@ -144,7 +132,7 @@ export const getAllTags = (): string[] => {
   return Array.from(tagsSet).sort();
 };
 
-// Get unique sources with their colors
+// Gets unique sources with their respective colors
 export const getSourcesWithColors = (): { name: string; color: string }[] => {
   return Object.entries(sourceColors).map(([name, color]) => ({
     name,

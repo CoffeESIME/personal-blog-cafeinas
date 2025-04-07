@@ -1,5 +1,1 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="128" cy="128" r="128" fill="#121212"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M128 76.8C99.696 76.8 76.8 99.696 76.8 128C76.8 156.304 99.696 179.2 128 179.2C156.304 179.2 179.2 156.304 179.2 128C179.2 99.696 156.304 76.8 128 76.8ZM128 92.8C108.581 92.8 92.8 108.581 92.8 128C92.8 147.419 108.581 163.2 128 163.2C147.419 163.2 163.2 147.419 163.2 128C163.2 108.581 147.419 92.8 128 92.8Z" fill="white"/>
-  <circle cx="128" cy="128" r="12.8" fill="white"/>
-</svg> 
+{"error":"[NOT_FOUND] File @lobehub/icons-static-svg@1.44.0/icons/ollama-color.svg not found"}
