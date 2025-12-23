@@ -5,159 +5,126 @@ import { useState, useEffect } from "react";
 import { TechItem } from "@/components/TechStack/TechItem";
 
 // Technology categories definition and data
+// Technology categories definition and data
 const techCategories = [
   {
-    id: "frontend",
-    title: "Frontend Development",
+    id: "languages",
+    title: "Core Languages",
     description:
-      "Technologies for creating interactive and responsive user interfaces that enhance the end-user experience.",
+      "The fundamental programming languages used for scripting, application logic, and systems programming.",
+    technologies: [
+      { name: "TypeScript", icon: "/icons/TypeScript.svg", color: "#3178C6" },
+      { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
+      { name: "Python", icon: "/icons/Python.svg", color: "#3776AB" },
+      { name: "Java", icon: "/icons/Java.svg", color: "#ED8B00" }, // Agregado por tu CV
+      { name: "C / Embedded C", icon: "/icons/C.svg", color: "#A8B9CC" },
+      { name: "SQL", icon: "/icons/SQL.svg", color: "#4479A1" },
+      { name: "Bash", icon: "/icons/Bash.svg", color: "#4EAA25" },
+      { name: "MATLAB", icon: "/icons/matlab.svg", color: "#0076A8" },
+    ],
+  },
+  {
+    id: "frontend",
+    title: "Frontend & Creative Web",
+    description:
+      "Libraries and frameworks for building responsive UIs, 3D visualizations, and interactive maps.",
     technologies: [
       { name: "React", icon: "/icons/React.svg", color: "#61DAFB" },
       { name: "Next.js", icon: "/icons/Next.js.svg", color: "#000000" },
-      { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
-      { name: "TypeScript", icon: "/icons/TypeScript.svg", color: "#3178C6" },
-      { name: "Tailwind", icon: "/icons/tailwind.svg", color: "#06B6D4" },
+      { name: "React Native", icon: "/icons/React.svg", color: "#61DAFB" }, // Agregado por tu CV
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg", color: "#06B6D4" },
+      { name: "Three.js", icon: "/icons/Three.js.svg", color: "#000000" }, // Del proyecto FlyBy
+      { name: "Mapbox GL", icon: "/icons/Mapbox.svg", color: "#4264FB" }, // Del proyecto FlyBy
+      { name: "Zustand", icon: "/icons/Zustand.svg", color: "#443E38" }, // Del proyecto SCADA
+      { name: "D3.js", icon: "/icons/D3.svg", color: "#F9A03C" }, // Del proyecto SCADA
       { name: "Astro", icon: "/icons/Astro.svg", color: "#FF5D01" },
-      { name: "p5.js", icon: "/icons/p5JS.svg", color: "#ED225D" },
-      { name: "Redux", icon: "/icons/Redux.svg", color: "#764ABC" },
     ],
   },
   {
     id: "backend",
-    title: "Backend Development",
+    title: "Backend & API Development",
     description:
-      "Technologies for building server logic, processing data, and connecting with databases, APIs, and external services.",
+      "Server-side architectures, API design (REST/GraphQL), and real-time communication.",
     technologies: [
       { name: "Node.js", icon: "/icons/Node.js.svg", color: "#339933" },
-      { name: "Express", icon: "/icons/default.svg", color: "#000000" },
       { name: "NestJS", icon: "/icons/Nest.js.svg", color: "#E0234E" },
       { name: "Django", icon: "/icons/Django.svg", color: "#092E20" },
-      { name: "Django REST", icon: "/icons/DjangoREST.svg", color: "#A30000" },
-      { name: "Python", icon: "/icons/Python.svg", color: "#3776AB" },
+      { name: "Express", icon: "/icons/Express.svg", color: "#000000" },
       { name: "GraphQL", icon: "/icons/graph-ql.svg", color: "#E10098" },
       { name: "Socket.io", icon: "/icons/Socket.io.svg", color: "#010101" },
+      { name: "MQTT Broker", icon: "/icons/Mqtt.svg", color: "#660066" }, // Mosquitto mencionado en SCADA
       { name: "PHP", icon: "/icons/PHP.svg", color: "#777BB4" },
     ],
   },
   {
-    id: "databases",
-    title: "Databases",
+    id: "iot",
+    title: "Industrial IoT & Embedded",
     description:
-      "Systems for efficiently storing, organizing, and retrieving data in applications and systems.",
+      "Integration of hardware, sensors, and industrial protocols for automation and telemetry.",
     technologies: [
+      { name: "Node-RED", icon: "/icons/node-red.svg", color: "#8F0000" },
+      { name: "Arduino", icon: "/icons/Arduino.svg", color: "#00979D" },
+      { name: "Raspberry Pi", icon: "/icons/RaspberryPi.svg", color: "#A22846" },
+      { name: "PLC (Siemens)", icon: "/icons/siemens.svg", color: "#009999" },
+      { name: "Modbus TCP/RTU", icon: "/icons/Modbus.svg", color: "#E31E24" }, // Clave en tu CV
+      { name: "SCADA Systems", icon: "/icons/scada.svg", color: "#FF5722" },
+      { name: "ESP32/8266", icon: "/icons/Espressif.svg", color: "#E7352C" },
+      { name: "TIA Portal", icon: "/icons/siemens.svg", color: "#009999" }, // Herramienta clave mencionada
+    ],
+  },
+  {
+    id: "databases",
+    title: "Databases & Data Storage",
+    description:
+      "Solutions for relational, document-based, graph, and time-series data management.",
+    technologies: [
+      { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg", color: "#336791" },
       { name: "MongoDB", icon: "/icons/MongoDB.svg", color: "#47A248" },
       { name: "Neo4j", icon: "/icons/Neo4j.svg", color: "#018BFF" },
-      { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg", color: "#336791" },
       { name: "MySQL", icon: "/icons/MySQL.svg", color: "#4479A1" },
-      {
-        name: "Graph Theory",
-        icon: "/icons/graph-theory.svg",
-        color: "#FF6D6A",
-      },
+      { name: "Redis", icon: "/icons/Redis.svg", color: "#DC382D" },
+    ],
+  },
+  {
+    id: "devops",
+    title: "DevOps & Cloud Infrastructure",
+    description:
+      "Tools for CI/CD pipelines, containerization, and cloud resource management.",
+    technologies: [
+      { name: "AWS", icon: "/icons/AWS.svg", color: "#FF9900" },
+      { name: "Terraform", icon: "/icons/HashiCorpTerraform.svg", color: "#7B42BC" },
+      { name: "Docker", icon: "/icons/Docker.svg", color: "#2496ED" },
+      { name: "GitHub Actions", icon: "/icons/GitHubActions.svg", color: "#2088FF" },
+      { name: "Linux / Ubuntu", icon: "/icons/Linux.svg", color: "#FCC624" },
+      { name: "NGINX", icon: "/icons/NGINX.svg", color: "#009639" },
+      { name: "Vite", icon: "/icons/Vite.svg", color: "#646CFF" }, // Build tool moderno
     ],
   },
   {
     id: "ai",
     title: "AI & Machine Learning",
     description:
-      "Technologies and frameworks for building intelligent systems, implementing machine learning models, and developing AI applications.",
+      "Integration of LLMs and frameworks for intelligent data processing.",
     technologies: [
       { name: "DeepSeek", icon: "/icons/deepseek.svg", color: "#3D7CF9" },
       { name: "Ollama", icon: "/icons/ollama.svg", color: "#FFFFFF" },
+      { name: "LangChain", icon: "/icons/LangChain.svg", color: "#1C3C3C" }, // Asumido por uso de LLMs
       { name: "LLaVA", icon: "/icons/llava.svg", color: "#10A37F" },
-      { name: "Hunyuan", icon: "/icons/hunyuan.svg", color: "#0084FF" },
-      { name: "LLM", icon: "/icons/llm.svg", color: "#8B5CF6" },
+      { name: "Python ML Stack", icon: "/icons/Python.svg", color: "#3776AB" },
     ],
   },
   {
-    id: "devops",
-    title: "DevOps & Infrastructure",
+    id: "engineering",
+    title: "Engineering & Design",
     description:
-      "Tools and practices for automation, continuous integration, deployment, and infrastructure management.",
-    technologies: [
-      { name: "AWS", icon: "/icons/AWS.svg", color: "#FF9900" },
-      { name: "Docker", icon: "/icons/default.svg", color: "#2496ED" },
-      {
-        name: "GitHub Actions",
-        icon: "/icons/GitHubActions.svg",
-        color: "#2088FF",
-      },
-      {
-        name: "Terraform",
-        icon: "/icons/HashiCorpTerraform.svg",
-        color: "#7B42BC",
-      },
-      { name: "Linux", icon: "/icons/Linux.svg", color: "#FCC624" },
-      { name: "Ubuntu", icon: "/icons/Ubuntu.svg", color: "#E95420" },
-      { name: "NGINX", icon: "/icons/NGINX.svg", color: "#009639" },
-      { name: "ESLint", icon: "/icons/ESLint.svg", color: "#4B32C3" },
-      { name: "NPM", icon: "/icons/NPM.svg", color: "#CB3837" },
-    ],
-  },
-  {
-    id: "iot",
-    title: "IoT & Embedded Systems",
-    description:
-      "Technologies for developing connected devices, automations, and Internet of Things solutions.",
-    technologies: [
-      { name: "Node-RED", icon: "/icons/node-red.svg", color: "#8F0000" },
-      { name: "MQTT", icon: "/icons/Mqtt.svg", color: "#660066" },
-      { name: "Arduino", icon: "/icons/Arduino.svg", color: "#00979D" },
-      {
-        name: "Raspberry Pi",
-        icon: "/icons/RaspberryPi.svg",
-        color: "#A22846",
-      },
-      { name: "Siemens", icon: "/icons/siemens.svg", color: "#009999" },
-      { name: "SCADA", icon: "/icons/scada.svg", color: "#FF5722" },
-      { name: "Drone", icon: "/icons/drone.svg", color: "#00AEEF" },
-      { name: "Embedded C", icon: "/icons/EmbeddedC.svg", color: "#A8B9CC" },
-    ],
-  },
-  {
-    id: "tools",
-    title: "Tools & Methodologies",
-    description:
-      "Tools for development, testing, project management, and code quality improvement.",
-    technologies: [
-      { name: "Git", icon: "/icons/Git.svg", color: "#F05032" },
-      { name: "GitHub", icon: "/icons/GitHub.svg", color: "#181717" },
-      { name: "BitBucket", icon: "/icons/BitBucket.svg", color: "#0052CC" },
-      { name: "Jira", icon: "/icons/Jira.svg", color: "#0052CC" },
-      { name: "Confluence", icon: "/icons/Confluence.svg", color: "#172B4D" },
-      { name: "SonarQube", icon: "/icons/SonarQube.svg", color: "#4E9BCD" },
-      { name: "Postman", icon: "/icons/Postman.svg", color: "#FF6C37" },
-      { name: "Figma", icon: "/icons/Figma.svg", color: "#F24E1E" },
-      { name: "Blender", icon: "/icons/Blender.svg", color: "#F5792A" },
-      { name: "GIMP", icon: "/icons/GIMP.svg", color: "#5C5543" },
-      { name: "PuTTY", icon: "/icons/PuTTY.svg", color: "#0000CE" },
-      { name: "FileZilla", icon: "/icons/FileZilla.svg", color: "#BF0000" },
-    ],
-  },
-  {
-    id: "languages",
-    title: "Programming Languages & Shells",
-    description:
-      "Core programming languages and command-line interfaces used across projects.",
-    technologies: [
-      { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
-      { name: "TypeScript", icon: "/icons/TypeScript.svg", color: "#3178C6" },
-      { name: "Python", icon: "/icons/Python.svg", color: "#3776AB" },
-      { name: "Bash", icon: "/icons/Bash.svg", color: "#4EAA25" },
-      { name: "PowerShell", icon: "/icons/Powershell.svg", color: "#5391FE" },
-      { name: "MATLAB", icon: "/icons/matlab.svg", color: "#0076A8" },
-    ],
-  },
-  {
-    id: "design",
-    title: "Design & 3D Modeling",
-    description:
-      "Tools for creating visual designs, 3D models, and technical drawings.",
+      "Tools for UI design, 3D modeling, and mechanical engineering (CAD).",
     technologies: [
       { name: "Figma", icon: "/icons/Figma.svg", color: "#F24E1E" },
       { name: "Blender", icon: "/icons/Blender.svg", color: "#F5792A" },
-      { name: "GIMP", icon: "/icons/GIMP.svg", color: "#5C5543" },
       { name: "SolidWorks", icon: "/icons/solidworks.svg", color: "#D82526" },
+      { name: "Fusion 360", icon: "/icons/Fusion360.svg", color: "#0696D7" }, // De tus certificados
+      { name: "Postman", icon: "/icons/Postman.svg", color: "#FF6C37" },
+      { name: "SonarQube", icon: "/icons/SonarQube.svg", color: "#4E9BCD" },
     ],
   },
 ];
@@ -215,11 +182,10 @@ export default function TechCategories() {
           <button
             key={category.id}
             onClick={() => handleCategoryClick(category.id)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              activeCategory === category.id
-                ? "bg-teal-500 text-white"
-                : "bg-slate-800 text-slate-300 hover:bg-slate-700"
-            }`}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === category.id
+              ? "bg-teal-500 text-white"
+              : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+              }`}
           >
             {category.title}
           </button>

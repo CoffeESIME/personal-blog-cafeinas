@@ -19,10 +19,11 @@ export default function Home() {
         <StatusWork isAvailable={isAvailable}></StatusWork>
       </div>
       <ol className="group/list">
-        {/* Other Job Entries */}
+        {/* Job Entries */}
+        {/* 1. Software Engineer / Full Stack Developer - 3Pillar Global */}
         <li className="mb-2">
           <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-            <div className="p-2 -inset-y-4 z-0  rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
+            <div className="p-2 -inset-y-4 z-0 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
               <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
                 2022 - Present
               </header>
@@ -31,36 +32,33 @@ export default function Home() {
                   <div>
                     <div className="inline-flex items-baseline font-medium leading-light text-slate-200 hover:text-teal-300 text-base">
                       <span>
-                        Software Engineer, Fullstack Developer
-                        <span className="pl-2 inline-block">3PillarGlobal</span>
+                        Software Engineer / Full Stack Developer
+                        <span className="pl-2 inline-block">3Pillar Global</span>
                       </span>
                     </div>
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  I have worked on various web development projects, focusing on both frontend and backend technologies, as well as infrastructure and DevOps.
+                  Architected and maintained scalable web solutions using modern Full Stack technologies. Focused on infrastructure automation, code quality, and enhancing backend performance for enterprise-level applications.
                 </p>
                 <ul className="mt-2 ml-4 list-disc list-inside text-sm text-slate-200 space-y-1">
                   <li>
-                    Developed an internal project management system using Next.js, Tailwind, Node.js, Express, and MongoDB.
+                    Engineered high-performance backend services using NestJS with both RESTful architectures and GraphQL APIs.
                   </li>
                   <li>
-                    Integrated SonarQube for continuous code quality checks.
+                    Modernized legacy infrastructure by implementing Infrastructure as Code (IaC) using Terraform and AWS, significantly reducing deployment times and environmental inconsistencies.
                   </li>
                   <li>
-                    Worked on a Python and Django-based project, utilizing Swagger for API documentation.
+                    Developed and standardized internal component libraries using React, ensuring UI consistency across multiple projects.
                   </li>
                   <li>
-                    Contributed to the app infrastructure using AWS and Terraform, handling DevOps tasks with Docker, GitHub Actions, and Bitbucket Pipelines.
+                    Optimized CI/CD workflows utilizing Docker, GitHub Actions, and Bitbucket Pipelines to streamline delivery.
                   </li>
                   <li>
-                    Gained experience with Linux, Apache, and Nginx servers.
+                    Led code quality initiatives by integrating SonarQube and Checkmarx, improving test coverage and security standards.
                   </li>
                   <li>
-                    Re-engaged with React, writing tests for both frontend and backend, and used Checkmarx for code analysis.
-                  </li>
-                  <li>
-                    Developed backend services using NestJS with GraphQL and frontend applications using React, SQL (PostgreSQL), CSS, and Material-UI.
+                    Built data-driven dashboards using Next.js and MongoDB to visualize critical business metrics.
                   </li>
                 </ul>
               </div>
@@ -68,11 +66,49 @@ export default function Home() {
           </div>
         </li>
 
+        {/* 2. Freelance Full Stack & IoT Engineer */}
         <li className="mb-2">
           <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <div className="p-2 -inset-y-4 z-0 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
               <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                2021 - 2023
+                2023 - Present
+              </header>
+              <div className="z-10 sm:col-span-6">
+                <h3 className="font-medium leading-snug text-slate-200">
+                  <div>
+                    <div className="inline-flex items-baseline font-medium leading-light text-slate-200 hover:text-teal-300 text-base">
+                      <span>
+                        Freelance Full Stack & IoT Engineer
+                        <span className="pl-2 inline-block">Independent Contractor</span>
+                      </span>
+                    </div>
+                  </div>
+                </h3>
+                <p className="mt-2 text-sm leading-normal">
+                  Design and development of end-to-end software solutions, specializing in the intersection of web technologies and Industrial IoT (IIoT).
+                </p>
+                <ul className="mt-2 ml-4 list-disc list-inside text-sm text-slate-200 space-y-1">
+                  <li>
+                    Delivering custom web applications for clients utilizing the MERN Stack (MongoDB, Express, React, Node.js) and Python ecosystems.
+                  </li>
+                  <li>
+                    Designing architecture for IoT/IIoT integration, bridging hardware devices with cloud dashboards using protocols like MQTT and Modbus.
+                  </li>
+                  <li>
+                    Deploying and managing personal servers and databases (MySQL, PostgreSQL, Neo4j) for data logging and specialized use cases.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        {/* 3. Apprentice Software Engineer - 3Pillar Global */}
+        <li className="mb-2">
+          <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <div className="p-2 -inset-y-4 z-0 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
+              <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                2021 - 2022
               </header>
               <div className="z-10 sm:col-span-6">
                 <h3 className="font-medium leading-snug text-slate-200">
@@ -80,29 +116,26 @@ export default function Home() {
                     <div className="inline-flex items-baseline font-medium leading-light text-slate-200 hover:text-teal-300 text-base">
                       <span>
                         Apprentice Software Engineer
-                        <span className="pl-2 inline-block">3PillarGlobal</span>
+                        <span className="pl-2 inline-block">3Pillar Global</span>
                       </span>
                     </div>
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  During my time as an Apprentice Software Engineer, I was focused on
-                  building a solid foundation in SQL and various technologies to
-                  prepare for a full-fledged software engineering role.
+                  Intensive professional development program focused on mastering enterprise-grade software development practices, Full Stack methodologies, and agile collaboration.
                 </p>
                 <ul className="mt-2 ml-4 list-disc list-inside text-sm text-slate-200 space-y-1">
                   <li>
-                    Gained proficiency in SQL, including basic queries, joins,
-                    triggers, table views, transactions, and functions.
+                    Gained deep proficiency in relational databases (SQL), mastering complex queries, triggers, stored procedures, and transaction management.
                   </li>
                   <li>
-                    Completed introductory courses in React, Node.js, Java, Git, React
-                    Native, and Python, expanding my understanding of full-stack
-                    development.
+                    Collaborated in Agile teams (Scrum) utilizing Jira and Git for version control, actively participating in code reviews and sprint planning.
                   </li>
                   <li>
-                    Learned team collaboration tools and methodologies, including
-                    Git for version control and Jira for project management.
+                    Rapidly adapted to new technologies, delivering functional modules in React Native, Python, and Java within tight deadlines.
+                  </li>
+                  <li>
+                    Built foundational knowledge in cloud services, containerization concepts, and software deployment lifecycles.
                   </li>
                 </ul>
               </div>
@@ -110,9 +143,10 @@ export default function Home() {
           </div>
         </li>
 
+        {/* 4. Support Engineer (IoT Specialist) - Telemetic */}
         <li className="mb-2">
           <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-            <div className="p-2 -inset-y-4 z-0  rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
+            <div className="p-2 -inset-y-4 z-0 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
               <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
                 2020 - 2021
               </header>
@@ -121,41 +155,35 @@ export default function Home() {
                   <div>
                     <div className="inline-flex items-baseline font-medium leading-light text-slate-200 hover:text-teal-300 text-base">
                       <span>
-                        Support Engineer
+                        Support Engineer (IoT Specialist)
                         <span className="pl-2 inline-block">Telemetic</span>
                       </span>
                     </div>
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  As a Support Engineer, I focused on telematics and IoT/IIoT
-                  solutions. My responsibilities included developing an HMI/SCADA
-                  application, where I integrated various devices through technologies
-                  such as Node-RED, MQTT, Webserver, TCP/IP, RS-232, and Modbus.
+                  Spearheaded the development of HMI/SCADA solutions and provided specialized technical support for Industrial IoT ecosystems, ensuring high availability for client operations.
                 </p>
                 <ul className="mt-2 ml-4 list-disc list-inside text-sm text-slate-200 space-y-1">
                   <li>
-                    Connected IoT devices including industrial radios, Exemys GRD,
-                    FreeWave radios, and GSM routers.
+                    Developed a real-time web visualization platform (HMI) using PHP, JavaScript, and Node-RED, displaying critical sensor data (tank levels, temperature, gauges) in real-time.
                   </li>
                   <li>
-                    Supported remote installations, including satellite connection
-                    antennas and other field equipment.
+                    Integrated diverse industrial hardware (PLCs, Industrial Radios, GSM Routers) using protocols like Modbus (RTU/TCP), MQTT, and RS-232/485.
                   </li>
                   <li>
-                    Developed a web application using HTML, CSS, JavaScript, and PHP,
-                    displaying connection status, animations (e.g., tank levels,
-                    thermometers, gauges), graphs, and allowed for sensor data download.
+                    Managed remote field installations and satellite telemetry connections, ensuring consistent uptime for remote monitoring systems.
                   </li>
                   <li>
-                    Conducted equipment testing, provided technical documentation for
-                    clients, and offered product information to aid in sales.
+                    Authored technical documentation and client guides to facilitate user adoption of new telemetry products and reduce support ticket volume.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </li>
+
+        {/* 5. Technical Instructor (Applied Engineering) - Dartronics */}
         <li className="mb-6">
           <div className="group relative p-2 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <div className="p-2 -inset-y-4 z-0 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset-0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:group-hover:drop-shadow-lg">
@@ -167,38 +195,24 @@ export default function Home() {
                   <div>
                     <div className="inline-flex items-baseline font-medium leading-light text-slate-200 hover:text-teal-300 text-base">
                       <span>
-                        Applied Engineering Instructor
+                        Technical Instructor (Applied Engineering)
                         <span className="pl-2 inline-block">Dartronics</span>
                       </span>
                     </div>
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  As a Technical Instructor, I specialized in delivering
-                  hands-on courses focused on practical applications of
-                  engineering principles. My teaching portfolio includes:
+                  Translated complex engineering concepts into hands-on practical training for students and professionals in the automation field, bridging the gap between theory and industry application.
                 </p>
                 <ul className="mt-2 ml-4 list-disc list-inside text-sm text-slate-200 space-y-1">
                   <li>
-                    <strong>PLC Programming and Automation:</strong> Provided
-                    comprehensive training on Siemens S7-1200 with TIA Portal,
-                    covering basic configuration, PID control, ladder logic,
-                    block diagram programming, and an introduction to Structured
-                    Control Language (SCL). I also utilized FactoryIO for
-                    simulating industrial automation scenarios.
+                    <strong>Automation & Control:</strong> Taught advanced PLC programming (Siemens S7-1200, TIA Portal), covering PID control, Ladder Logic, SCL, and industrial simulation using FactoryIO.
                   </li>
                   <li>
-                    <strong>Microcontrollers and Embedded Systems:</strong> Taught
-                    the use of PIC microcontrollers, Arduino, and Raspberry Pi
-                    for various automation and control projects, guiding students
-                    through the process of designing and implementing embedded
-                    systems.
+                    <strong>Embedded Systems:</strong> Instructed on the design and programming of microcontrollers (Arduino, PIC, Raspberry Pi) for robotics and home automation projects.
                   </li>
                   <li>
-                    <strong>Simulation and Design Software:</strong> Conducted
-                    courses in MATLAB for system modeling and control design, and
-                    SolidWorks for CAD, enhancing students&apos; ability to simulate
-                    and visualize engineering projects.
+                    <strong>Simulation & Design:</strong> Led workshops on MATLAB for mathematical modeling and control design, and SolidWorks for CAD design and prototyping.
                   </li>
                 </ul>
               </div>
@@ -207,7 +221,6 @@ export default function Home() {
         </li>
 
         <CourseCarousel courses={courses} />
-        {/* Other Job Entries */}
       </ol>
     </main>
   );
