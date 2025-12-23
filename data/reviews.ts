@@ -25,6 +25,12 @@ export const reviews = [
   },
   {
     id: 5,
+    author: "Carlos Alberto Rodríguez Alanís",
+    title: "Software Engineering Manager at ITJ",
+    body: "I worked with Fabián for about 2 years, and all I can say is his work was pretty good. Good quality on his code, and good execution of the ideas and direction of the project. One of the skills I valued the most is that he was always open to feedback. I see a lot of potential in him. Gonna miss working with him.",
+  },
+  {
+    id: 6,
     author: "LinkedIn",
     title: "Email",
     body: "If you have worked with me and would like to share your experience, please write me a testimonial on LinkedIn or send it to me via email at heromfabian@gmail.com! I would love to hear your feedback!",
