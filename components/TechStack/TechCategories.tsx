@@ -13,7 +13,7 @@ const techCategories = [
     description:
       "The fundamental programming languages used for scripting, application logic, and systems programming.",
     technologies: [
-      { name: "TypeScript", icon: "/icons/TypeScript.svg", color: "#3178C6" },
+      { name: "TypeScript", icon: "/icons/typeScript.svg", color: "#3178C6" },
       { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
       { name: "Python", icon: "/icons/Python.svg", color: "#3776AB" },
       { name: "Java", icon: "/icons/Java.svg", color: "#ED8B00" }, // Agregado por tu CV
@@ -79,8 +79,8 @@ const techCategories = [
       "Solutions for relational, document-based, graph, and time-series data management.",
     technologies: [
       { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg", color: "#336791" },
-      { name: "MongoDB", icon: "/icons/MongoDB.svg", color: "#47A248" },
-      { name: "Neo4j", icon: "/icons/Neo4j.svg", color: "#018BFF" },
+      { name: "MongoDB", icon: "/icons/mongoDB.svg", color: "#47A248" },
+      { name: "Neo4j", icon: "/icons/neo4j.svg", color: "#018BFF" },
       { name: "MySQL", icon: "/icons/MySQL.svg", color: "#4479A1" },
       { name: "Redis", icon: "/icons/Redis.svg", color: "#DC382D" },
     ],
