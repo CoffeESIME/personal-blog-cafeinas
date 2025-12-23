@@ -31,7 +31,7 @@ const techCategories = [
     technologies: [
       { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
       { name: "Next.js", icon: "/icons/Next.js.svg", color: "#000000" },
-      { name: "React Native", icon: "/icons/React.svg", color: "#61DAFB" },
+      { name: "React Native", icon: "/icons/react.svg", color: "#61DAFB" },
       { name: "Tailwind CSS", icon: "/icons/tailwind.svg", color: "#06B6D4" },
       { name: "Three.js", icon: "/icons/Three.js.svg", color: "#000000" },
       { name: "Mapbox GL", icon: "/icons/Mapbox.svg", color: "#4264FB" },
