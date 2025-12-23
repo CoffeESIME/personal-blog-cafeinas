@@ -36,7 +36,7 @@ export const projectsData: Project[] = [
     title: "SCADA/Telemetry",
     description:
       "SCADA project for real-time monitoring and control aimed at degree certification.",
-    image: projectImagePath,
+    image: "/images/scada-system.jpg",
     technologies: [
       createTech("Next.js"),
       createTech("Typescript"),
@@ -49,13 +49,44 @@ export const projectsData: Project[] = [
     category: ["iot", "backend", "frontend"],
     githubUrl: "https://github.com/CoffeESIME/react-scada-hmi",
   },
-
+  {
+    id: "mixtlinder",
+    title: "Mixtlinder",
+    description:
+      "Cross-platform mobile hiking app featuring Tinder-style swipe mechanics for guide discovery, interactive maps, and gamified route tracking.",
+    image: "/images/mixtinder.png",
+    technologies: [
+      createTech("React"),
+      createTech("TypeScript"),
+      createTech("Expo"),
+      createTech("Mapbox"),
+      createTech("Node.js"),
+    ],
+    category: ["mobile", "frontend", "gis"],
+    githubUrl: "https://github.com/CoffeESIME/mixtlinder",
+  },
+  {
+    id: "flyby-hiking",
+    title: "FlyBy Hiking",
+    description:
+      "Cinematic 3D GPX route viewer featuring real terrain generation, animated flyovers, and an integrated photo gallery.", image: "/images/fly-by.png",
+    technologies: [
+      createTech("Next.js"),
+      createTech("React"),
+      createTech("TypeScript"),
+      createTech("Tailwind"),
+      createTech("Three.js"),
+      createTech("Mapbox GL"),
+    ],
+    category: ["frontend", "3d", "gis"],
+    githubUrl: "https://github.com/CoffeESIME/mapbox-gpx-viewer",
+  },
   {
     id: "hiking-backend",
     title: "Hiking Routes Backend",
     description:
       "NestJS API for uploading, storing, and processing GPX hiking files.",
-    image: projectImagePath,
+    image: "/images/routes-be.png",
     technologies: [createTech("NestJS"), createTech("TypeScript")],
     category: ["backend"],
     githubUrl: "https://github.com/CoffeESIME/creatormaps",
@@ -65,10 +96,10 @@ export const projectsData: Project[] = [
     title: "Routes Visualization Frontend",
     description:
       "Next.js application with TypeScript for interactive map visualization of routes.",
-    image: projectImagePath,
+    image: "/images/visual-maps.jpeg",
     technologies: [
-      createTech("Next.js"),
-      createTech("TypeScript"),
+      createTech("Old React"),
+      createTech("Leaflet"),
       createTech("Tailwind"),
     ],
     category: ["frontend"],
