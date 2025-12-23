@@ -29,14 +29,14 @@ const techCategories = [
     description:
       "Libraries and frameworks for building responsive UIs, 3D visualizations, and interactive maps.",
     technologies: [
-      { name: "React", icon: "/icons/React.svg", color: "#61DAFB" },
+      { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
       { name: "Next.js", icon: "/icons/Next.js.svg", color: "#000000" },
-      { name: "React Native", icon: "/icons/React.svg", color: "#61DAFB" }, // Agregado por tu CV
+      { name: "React Native", icon: "/icons/React.svg", color: "#61DAFB" },
       { name: "Tailwind CSS", icon: "/icons/tailwind.svg", color: "#06B6D4" },
-      { name: "Three.js", icon: "/icons/Three.js.svg", color: "#000000" }, // Del proyecto FlyBy
-      { name: "Mapbox GL", icon: "/icons/Mapbox.svg", color: "#4264FB" }, // Del proyecto FlyBy
-      { name: "Zustand", icon: "/icons/Zustand.svg", color: "#443E38" }, // Del proyecto SCADA
-      { name: "D3.js", icon: "/icons/D3.svg", color: "#F9A03C" }, // Del proyecto SCADA
+      { name: "Three.js", icon: "/icons/Three.js.svg", color: "#000000" },
+      { name: "Mapbox GL", icon: "/icons/Mapbox.svg", color: "#4264FB" },
+      { name: "Zustand", icon: "/icons/Zustand.svg", color: "#443E38" },
+      { name: "D3.js", icon: "/icons/D3.svg", color: "#F9A03C" },
       { name: "Astro", icon: "/icons/Astro.svg", color: "#FF5D01" },
     ],
   },
